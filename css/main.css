@@ -1,0 +1,35 @@
+/****************************/
+/* RESET */
+/****************************/
+
+*{
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, div {
+    display: block;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
