@@ -8,7 +8,7 @@
             <a href="https://twitter.com/fabricelabit" target="_blank"><img src="images/social_twitter_blanc.gif" alt="logo twitter gris"></a>
         </div>
         <div class="col-5">
-            <a href="http://mariageetsavoirfaire.com/"><img src="images/logo-mariage-savoir-faire.gif" alt="logo Mariage et Savoir-faire"></a>
+            <a href="http://mariageetsavoirfaire.com/" target="_blank"><img src="images/logo-mariage-savoir-faire.gif" alt="logo Mariage et Savoir-faire"></a>
             <p>Membre du collectif Mariage et Savoir-faire</p>
         </div>
     </div>
@@ -20,6 +20,6 @@
          --><a href="https://www.instagram.com/fabricelabit/" target="_blank"><img src="images/img-footer-3.jpg" alt="photo gros plan sur les mains des mariés"></a><!--
          --><a href="https://www.instagram.com/fabricelabit/" target="_blank"><img src="images/img-footer-4.jpg" alt="photo robe de mariée suspendue"></a>
         </div>
-        <p>© 2017 Fabrice Labit - Tout droit réservé - 06 83 25 24 89 - contact@fabricelabit.com</p>
+        <p>© 2017 Fabrice Labit - Tout droit réservé - 06 83 25 24 89 - <a href="mailto:contact@fabricelabit.com">contact@fabricelabit.com</a></p>
     </div>
 </footer>

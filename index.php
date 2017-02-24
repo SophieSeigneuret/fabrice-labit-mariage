@@ -24,6 +24,24 @@
 require_once 'views/header.php';
 ?>
 
+<main class="wrapper">
+    <section id="carousel">
+        <img src="images/carousel/img-carousel-mariage-1.jpg" alt="image mariage 1 du carousel" />
+        <div>
+            <h4>"Le mariage c’est la volonté à deux de créer l’unique"</h4>
+            <h5>- Friedrich Neitzsche -</h5>
+        </div>
+    </section>
+    <aside id="a-propos-photographe" class="row">
+        <img src="images/fabrice-labit.jpg" alt="photo de profil de Fabrice Labit" class="col-2">
+        <div class="col-10">
+            <h3>A propos de moi</h3>
+            <p>Il est très important pour ce jour unique d'avoir l'assurance de faire appel à un photographe professionnel pour que votre journée soit capturée dans les meilleures conditions quelles que soient les circonstances. En observateur discret, je couvre les mariages en mode photoreportage.</p>
+            <a href="#">En savoir plus sur Fabrice</a>
+        </div>
+    </aside>
+</main>
+
 <?php
 require_once 'views/footer.php';
 ?>

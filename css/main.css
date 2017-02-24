@@ -122,22 +122,133 @@ li {
 }
 
 /* menu navigation */
-
-nav>ul>li {
-    display: inline-block;
+nav {
+    margin: 80px auto;
+    text-align: center;
 }
 
-nav ul li a {
-    color: #cacaca;
+nav #menu>li {
+    display: inline-block;
+    position: relative;
     font-size: 1.2rem;
     font-weight: 300;
 }
 
+nav  #menu ul li {
+    display: inherit;
+    text-align: left;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+nav #menu ul{
+    position:absolute;
+    width: 400px;
+    z-index: 1000;
+    max-height:0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    -moz-transition: .4s all .1s;
+    -webkit-transition: .4s all .1s;
+    transition: .4s all .1s;
+}
+
+nav #menu li:hover ul {
+    max-height: 120px;
+}
+
+nav #menu li a:hover {
+    color: #6c6c6c;
+}
+
+nav #menu a {
+    text-decoration:none;
+    display:block;
+    padding:5px 32px;
+    color: #cacaca;
+
+}
+
+nav #menu li:hover li a {
+    text-transform: inherit;
+}
 
 
 
+/****************************/
+/* MAIN PAGE D'ACCUEIL */
+/****************************/
 
 
+#carousel {
+    text-align: center;
+}
+
+#carousel img {
+    width: 800px;
+    padding: 20px;
+    border: 1px solid #cacaca;
+}
+
+/* citation */
+#carousel h4 {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    color: #cacaca;
+    margin: 30px 0 5px;
+}
+
+/* auteur citation */
+#carousel h5 {
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #6c6c6c;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* aside à propos du photographe */
+#a-propos-photographe {
+    margin-top: 100px;
+}
+
+#a-propos-photographe div {
+    height: 160px;
+    padding-left: 30px;
+    text-align: justify;
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+}
+
+#a-propos-photographe div h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #6c6c6c;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+#a-propos-photographe div p {
+    color: #6c6c6c;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+#a-propos-photographe div a {
+    color: #cacaca;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+#a-propos-photographe div a:hover {
+    color: #6c6c6c;
+}
 
 
 /****************************/
@@ -154,7 +265,7 @@ nav ul li a {
 
 #social-link-footer div:first-of-type {
     margin-top: 30px;
-    border-right: 1px solid #6c6c6c;
+    padding-left: 80px;
 }
 
 #social-link-footer div:first-of-type a {
@@ -177,24 +288,34 @@ nav ul li a {
 }
 
 /* mariage et savoir-faire */
+#social-link-footer div:last-of-type {
+    border-left: 1px solid #6c6c6c;
+    margin-top: 7px;
+    padding-right: 100px;
+}
+
 #social-link-footer div:last-of-type a, #social-link-footer div:last-of-type p {
     display: inline-block;
     vertical-align: middle;
 }
 
+#social-link-footer div:last-of-type a {
+    margin-right: 10px;
+}
+
 #social-link-footer div:last-of-type img {
     width: 70px;
-    margin-right: 20px;
 }
 
 #social-link-footer div:last-of-type p {
-    width: 80px;
+    width: 64px;
     text-align: left;
     color: #6c6c6c;
+    font-size: 0.8rem;
 }
 
 
-/* photos footer */
+/* titre instagram */
 footer #img-footer h3 {
     color: #6c6c6c;
     font-weight: 300;
@@ -203,11 +324,13 @@ footer #img-footer h3 {
     text-transform: uppercase;
 }
 
+/* photos footer */
 footer #img-footer a:first-of-type, footer #img-footer a:nth-of-type(2), footer #img-footer a:nth-of-type(3) {
     display: inline-block;
     margin-right: 13px;
 }
 
+/* copyright */
 footer #img-footer p {
     color: #6c6c6c;
     font-weight: 300;
@@ -216,6 +339,16 @@ footer #img-footer p {
     border-top: 1px solid #cacaca;
     padding: 12px;
 }
+
+footer #img-footer p a {
+    color: #6c6c6c;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+
+
+
 
 
 /*************************************************************************************************************************************/

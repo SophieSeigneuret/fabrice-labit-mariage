@@ -10,25 +10,28 @@
         <h1>Fabrice Labit Mariage</h1>
     </div>
     <nav>
-        <ul>
+        <ul id="menu">
             <li><a href="index.php">ACCUEIL</a></li>
-            <li><a href="index.php">PORTFOLIO</a></li>
+            <li><a href="#">PORTFOLIO</a>
                 <ul>
-                    <li><a href="index.php">Préparatifs</a></li>
-                    <li><a href="index.php">Mariage</a></li>
-                    <li><a href="index.php">Engaement</a></li>
+                    <li><a href="#">Préparatifs</a></li>
+                    <li><a href="#">Mariage</a></li>
+                    <li><a href="#">Engagement</a></li>
                 </ul>
-            <li><a href="index.php">A PROPOS</a></li>
+            </li>
+            <li><a href="#">A PROPOS</a>
                 <ul>
-                    <li><a href="index.php">A propos de moi</a></li>
-                    <li><a href="index.php">FAQ</a></li>
+                    <li><a href="#">A propos de moi</a></li>
+                    <li><a href="#">FAQ</a></li>
                 </ul>
-            <li><a href="index.php">TEMOIGNAGES</a></li>
+            </li>
+            <li><a href="#">TEMOIGNAGES</a>
                 <ul>
-                    <li><a href="index.php">Ils m'ont fait confiance</a></li>
-                    <li><a href="index.php">Laissez un témoignage</a></li>
+                    <li><a href="#">Ils m'ont fait confiance</a></li>
+                    <li><a href="#">Laissez un témoignage</a></li>
                 </ul>
-            <li><a href="index.php">CONTACT</a></li>
+            </li>
+            <li><a href="#">CONTACT</a></li>
         </ul>
     </nav>
 </header>
