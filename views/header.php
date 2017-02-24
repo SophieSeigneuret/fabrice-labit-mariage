@@ -1,12 +1,11 @@
 <header class="wrapper">
-    <div>
-        <a href="https://www.facebook.com/fabricelabitmariage/"><img src="images/social_facebook_gris.gif" alt="logo facebook gris"></a>
-        <a href="https://www.facebook.com/fabricelabitmariage/"><img src="images/social_instagram_gris.gif" alt="logo instagram gris"></a>
-        <a href="https://www.facebook.com/fabricelabitmariage/"><img src="images/social_pinterest_gris.gif" alt="logo pinterest gris"></a>
-        <a href="https://www.facebook.com/fabricelabitmariage/"><img src="images/social_twitter_gris.gif" alt="logo twitter gris"></a>
+    <div id="social-link-header">
+        <a href="https://twitter.com/fabricelabit" target="_blank"><img src="images/social_twitter_gris.gif" alt="logo twitter gris"></a>
+        <a href="https://fr.pinterest.com/fabricelabit/" target="_blank"><img src="images/social_pinterest_gris.gif" alt="logo pinterest gris"></a>
+        <a href="https://www.instagram.com/fabricelabit/" target="_blank"><img src="images/social_instagram_gris.gif" alt="logo instagram gris"></a>
+        <a href="https://www.facebook.com/fabricelabitmariage/" target="_blank"><img src="images/social_facebook_gris.gif" alt="logo facebook gris"></a>
     </div>
-    <hr/>
-    <div>
+    <div id="logo-header">
         <a href="index.php"><img src="images/logo-fabrice-labit-mariage.jpg" alt="logo Fabrice Labit Mariage"></a>
         <h1>Fabrice Labit Mariage</h1>
     </div>

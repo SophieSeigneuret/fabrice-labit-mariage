@@ -33,3 +33,237 @@ li {
     width: 960px;
     margin: 0 auto;
 }
+
+.spacer {
+    display: block;
+    height: 100px;
+}
+
+
+/*************************************************************************************************************************************/
+/*********************** VERSION DESKTOP ***********************/
+/*************************************************************************************************************************************/
+
+/****************************/
+/* GRILLE */
+/****************************/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/** on aligne les colonnes les unes à côté des autres avec la propriété float **/
+[class*="col-"] {
+    float: left;
+    /*
+    padding: 0 15px;
+    */
+}
+
+/** chaque rangée de colonnes doit être enveloppée dans une div de class "row".
+    on applique un clear:both sur chaque row afin d'annuler l'effet de float
+    et éviter que les éléments suivants remontent et entourent le "row"**/
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+/*END GRILLE ****************************************************/
+
+
+
+/****************************/
+/* HEADER */
+/****************************/
+
+/* liens sociaux header */
+#social-link-header {
+    height: 50px;
+    border-bottom: 1px solid #cacaca;
+}
+
+#social-link-header img {
+    margin-top: 15px;
+}
+
+#social-link-header a {
+    display: inline-block;
+    width: 80px;
+    float: right;
+    text-align: center;
+}
+
+/* logo FL Mariage */
+#logo-header {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#logo-header img {
+    width: 70px;
+    position: relative;
+    top: -20px;
+}
+
+#logo-header h1 {
+    font-weight: 300;
+    margin: 0px;
+    font-size: 26px;
+    position: relative;
+    top: -20px;
+}
+
+/* menu navigation */
+
+nav>ul>li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #cacaca;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+/****************************/
+/* FOOTER */
+/****************************/
+
+/* liens sociaux */
+#social-link-footer {
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+    text-align: center;
+    height: 105px;
+}
+
+#social-link-footer div:first-of-type {
+    margin-top: 30px;
+    border-right: 1px solid #6c6c6c;
+}
+
+#social-link-footer div:first-of-type a {
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    background-color: #6c6c6c;
+}
+
+#social-link-footer div:first-of-type img {
+    padding: 8px;
+}
+
+#social-link-footer div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* mariage et savoir-faire */
+#social-link-footer div:last-of-type a, #social-link-footer div:last-of-type p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#social-link-footer div:last-of-type img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+#social-link-footer div:last-of-type p {
+    width: 80px;
+    text-align: left;
+    color: #6c6c6c;
+}
+
+
+/* photos footer */
+footer #img-footer h3 {
+    color: #6c6c6c;
+    font-weight: 300;
+    text-align: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+footer #img-footer a:first-of-type, footer #img-footer a:nth-of-type(2), footer #img-footer a:nth-of-type(3) {
+    display: inline-block;
+    margin-right: 13px;
+}
+
+footer #img-footer p {
+    color: #6c6c6c;
+    font-weight: 300;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #cacaca;
+    padding: 12px;
+}
+
+
+/*************************************************************************************************************************************/
+/*********************** VERSION TABLETTE ***********************/
+/*************************************************************************************************************************************/
+@media only screen and (max-width: 960px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*************************************************************************************************************************************/
+/*********************** VERSION MOBILE ***********************/
+/*************************************************************************************************************************************/
+@media only screen and (max-width: 768px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+
+
+}
