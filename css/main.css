@@ -96,7 +96,7 @@ li {
 
 #social-link-header a {
     display: inline-block;
-    width: 80px;
+    margin: 0 30px;
     float: right;
     text-align: center;
 }
@@ -165,7 +165,7 @@ nav #menu li a:hover {
 nav #menu a {
     text-decoration:none;
     display:block;
-    padding:5px 32px;
+    padding:5px 38px;
     color: #cacaca;
 
 }
@@ -249,6 +249,103 @@ nav #menu li:hover li a {
 #a-propos-photographe div a:hover {
     color: #6c6c6c;
 }
+
+
+
+
+
+/****************************/
+/* PAGE CONTACT */
+/****************************/
+
+/* 4 photos fleurs */
+#contact .img-bouquets {
+    text-align: center;
+}
+
+#contact .img-bouquets img {
+    margin: 0 5px;
+}
+
+/* nom et coordonnées Fabrice */
+#contact h2 {
+    text-align: center;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #6c6c6c;
+    margin: 50px 0 0;
+}
+
+#contact h3, #contact h3 a {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 5px 0;
+    color: black;
+}
+
+/* texte avant formulaire */
+#contact p {
+    margin: 50px 0 80px;
+    color: #6c6c6c;
+    text-align: center;
+    border-top: 1px solid #cacaca;
+    padding-top: 50px;
+    font-weight: 100;
+}
+
+/****** formulaire contact ******/
+#form-contact>div {
+    margin: 30px 0;
+}
+
+#form-contact label {
+    color: #6c6c6c;
+}
+
+#form-contact input[type=text], #form-contact input[type=tel], #form-contact input[type=email], #form-contact select {
+    height: 35px;
+    position: relative;
+    top: -8px;
+}
+
+#form-contact input[type=checkbox], #form-contact input[type=radio] {
+    margin-right: 5px;
+}
+
+#form-contact div:nth-of-type(7) {
+    margin: 45px 0;
+}
+
+/* select */
+#form-contact select {
+    border-color: #cacaca;
+}
+
+#form-contact div:nth-of-type(9) label {
+    margin-bottom: 7px;
+}
+
+#form-contact input {
+    padding-left: 10px;
+}
+
+#form-contact input[type=submit] {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #6c6c6c;
+    color: #fff;
+    height: 35px;
+    width: 300px;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 80px;
+}
+
+
+
 
 
 /****************************/

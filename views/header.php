@@ -31,7 +31,7 @@
                     <li><a href="#">Laissez un témoignage</a></li>
                 </ul>
             </li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
         </ul>
     </nav>
 </header>
