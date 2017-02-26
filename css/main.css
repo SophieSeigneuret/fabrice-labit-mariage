@@ -63,9 +63,6 @@ li {
 /** on aligne les colonnes les unes à côté des autres avec la propriété float **/
 [class*="col-"] {
     float: left;
-    /*
-    padding: 0 15px;
-    */
 }
 
 /** chaque rangée de colonnes doit être enveloppée dans une div de class "row".
@@ -176,6 +173,36 @@ nav #menu li:hover li a {
 
 
 
+
+/****************************/
+/* MAIN GLOBAL */
+/****************************/
+
+/* 4 photos fleurs */
+.img-bouquets {
+    text-align: center;
+}
+
+.img-bouquets img {
+    margin: 0 5px;
+}
+
+/* titres */
+#apropos h2, #faq h2, #temoignages h2, #laisser-temoignage h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #6c6c6c;
+    text-transform: uppercase;
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+    padding: 10px 0;
+    margin-bottom: 100px;
+}
+
+
+
+
 /****************************/
 /* MAIN PAGE D'ACCUEIL */
 /****************************/
@@ -254,18 +281,101 @@ nav #menu li:hover li a {
 
 
 
+
+
+
 /****************************/
-/* PAGE CONTACT */
+/* MAIN A PROPOS */
 /****************************/
 
-/* 4 photos fleurs */
-#contact .img-bouquets {
+/* à propos de moi */
+#apropos p {
+    margin-top: 0;
+    color: #6c6c6c;
+    padding-left: 40px;
+    text-align: justify;
+}
+
+/* FAQ */
+#faq div:last-of-type {
+    margin-top: 100px;
+}
+
+#faq div:last-of-type h3 {
+    margin: 20px 0 5px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+#faq div:last-of-type p {
+    margin: 0 0 30px;
+    color: #6c6c6c;
+    text-align: justify;
+    font-weight: 100;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #cacaca;
+}
+
+#faq div:last-of-type p:last-of-type {
+    border-bottom: none;
+}
+
+
+
+
+/****************************/
+/* MAIN TEMOIGNAGES */
+/****************************/
+
+#temoignages div h3, #temoignages div p {
+    padding-left: 30px;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+#temoignages div h3 {
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+#temoignages div p {
+    color: #6c6c6c;
+    text-align: justify;
+    margin: 0;
+}
+
+/* alignement photo et texte par le bas */
+#temoignages>div img, #temoignages>div div {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#temoignages>div img {
+    width: 16%;
+}
+
+#temoignages>div div {
+    width: 84%;
+}
+
+#temoignages>div {
+    margin-bottom: 50px;
+}
+
+/* texte avant formulaire */
+#laisser-temoignage p {
+    margin: 50px 0 80px;
+    color: #6c6c6c;
     text-align: center;
+    padding-top: 50px;
+    font-weight: 100;
 }
 
-#contact .img-bouquets img {
-    margin: 0 5px;
-}
+
+
+/****************************/
+/* MAIN PAGE CONTACT */
+/****************************/
 
 /* nom et coordonnées Fabrice */
 #contact h2 {
@@ -295,26 +405,37 @@ nav #menu li:hover li a {
     font-weight: 100;
 }
 
+
+
+
+/****************************/
+/* FORMULAIRES */
+/****************************/
+
+
+
+
 /****** formulaire contact ******/
-#form-contact>div {
+#form-contact>div, #form-temoignage>div {
     margin: 30px 0;
 }
 
-#form-contact label {
+#form-contact label, #form-temoignage {
     color: #6c6c6c;
 }
 
-#form-contact input[type=text], #form-contact input[type=tel], #form-contact input[type=email], #form-contact select {
+#form-contact input[type=text], #form-contact input[type=tel], #form-contact input[type=email], #form-contact select, #form-temoignage input[type=text], #form-temoignage input[type=email] {
     height: 35px;
     position: relative;
     top: -8px;
 }
 
-#form-contact input[type=checkbox], #form-contact input[type=radio] {
+#form-contact input[type=checkbox], #form-contact input[type=radio], #form-temoignage input[type=checkbox] {
     margin-right: 5px;
 }
 
-#form-contact div:nth-of-type(7) {
+/* ligne budget photographe */
+#form-contact div:nth-of-type(7), #form-temoignage div:nth-of-type(4) {
     margin: 45px 0;
 }
 
@@ -323,15 +444,17 @@ nav #menu li:hover li a {
     border-color: #cacaca;
 }
 
-#form-contact div:nth-of-type(9) label {
+/* label "votre message" */
+#form-contact div:nth-of-type(9) label, #form-temoignage div:nth-of-type(5) label {
     margin-bottom: 7px;
 }
 
-#form-contact input {
+/* padding left à l'intérieur des input */
+#form-contact input, #form-temoignage input {
     padding-left: 10px;
 }
 
-#form-contact input[type=submit] {
+#form-contact input[type=submit], #form-temoignage input[type=submit] {
     display: block;
     text-align: center;
     margin: 0 auto;
@@ -343,7 +466,6 @@ nav #menu li:hover li a {
     text-transform: uppercase;
     margin-top: 80px;
 }
-
 
 
 

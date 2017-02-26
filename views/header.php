@@ -21,14 +21,14 @@
             </li>
             <li><a href="#">A PROPOS</a>
                 <ul>
-                    <li><a href="#">A propos de moi</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="apropos.php">A propos de moi</a></li>
+                    <li><a href="faq.php">FAQ</a></li>
                 </ul>
             </li>
             <li><a href="#">TEMOIGNAGES</a>
                 <ul>
-                    <li><a href="#">Ils m'ont fait confiance</a></li>
-                    <li><a href="#">Laissez un témoignage</a></li>
+                    <li><a href="temoignages.php">Ils m'ont fait confiance</a></li>
+                    <li><a href="laisser-temoignage.php">Laissez un témoignage</a></li>
                 </ul>
             </li>
             <li><a href="contact.php">CONTACT</a></li>

@@ -41,7 +41,7 @@ require_once 'views/header.php';
             <p>Il est très important pour ce jour unique d'avoir l'assurance de faire appel à un photographe
                 professionnel pour que votre journée soit capturée dans les meilleures conditions quelles que soient les
                 circonstances. En observateur discret, je couvre les mariages en mode photoreportage.</p>
-            <a href="#">En savoir plus sur Fabrice</a>
+            <a href="apropos.php">En savoir plus sur Fabrice</a>
         </div>
     </aside>
 </main>
