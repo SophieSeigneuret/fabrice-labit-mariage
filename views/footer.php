@@ -23,3 +23,6 @@
         <p>© 2017 Fabrice Labit - Tout droit réservé - 06 83 25 24 89 - <a href="mailto:contact@fabricelabit.com">contact@fabricelabit.com</a></p>
     </div>
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="scripts/main.js"></script>

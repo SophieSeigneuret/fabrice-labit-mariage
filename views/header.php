@@ -10,6 +10,7 @@
         <h1>Fabrice Labit Mariage</h1>
     </div>
     <nav>
+        <a class="mobile_menu" title="Menu" href="#">Menu</a>
         <ul id="menu">
             <li><a href="index.php">ACCUEIL</a></li>
             <li><a href="#">PORTFOLIO</a>
@@ -19,13 +20,13 @@
                     <li><a href="#">Engagement</a></li>
                 </ul>
             </li>
-            <li><a href="#">A PROPOS</a>
+            <li><a href="apropos.php">A PROPOS</a>
                 <ul>
                     <li><a href="apropos.php">A propos de moi</a></li>
                     <li><a href="faq.php">FAQ</a></li>
                 </ul>
             </li>
-            <li><a href="#">TEMOIGNAGES</a>
+            <li><a href="temoignages.php">TEMOIGNAGES</a>
                 <ul>
                     <li><a href="temoignages.php">Ils m'ont fait confiance</a></li>
                     <li><a href="laisser-temoignage.php">Laissez un témoignage</a></li>

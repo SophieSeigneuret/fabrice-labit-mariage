@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Contactez votre photographe de mariage Fabrice Labit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,400i" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -101,7 +102,7 @@ require_once 'views/header.php';
         </div>
         <div class="row">
             <label for="message" class="col-12">Votre message</label>
-            <textarea name="" id="message" rows="8" class="col-12"></textarea>
+            <textarea name="message" id="message" rows="8" class="col-12"></textarea>
         </div>
         <input type="submit" name="submit" value="Envoyer">
     </form>
