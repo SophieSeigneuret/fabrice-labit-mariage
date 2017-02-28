@@ -6,9 +6,9 @@
     box-sizing: border-box;
 }
 
-article, aside, details, figcaption, figure, footer, header, main, nav, section, div {
-    display: block;
-}
+/*article, aside, details, figcaption, figure, footer, header, main, nav, section, div {*/
+    /*display: block;*/
+/*}*/
 
 html {
     font-family: 'Roboto', sans-serif;
@@ -123,7 +123,6 @@ li {
 nav {
     margin: 80px auto;
     position: relative;
-    /*text-align: center;*/
     width: 782px;
 }
 
@@ -133,14 +132,16 @@ nav a.mobile_menu {
     background-size: contain;
     position: absolute;
     top: 0;
-    margin-left: -16px;
+    margin-left: -90px;
     display: none;
-    border-top: 1px solid #cacaca;
-    border-bottom: 1px solid #cacaca;
-    padding: 10px 0 30px;
+    /*border-top: 1px solid #cacaca;*/
+    /*border-bottom: 1px solid #cacaca;*/
+    padding: 7px 0 34px;
     text-align: center;
-    color: #cacaca;
+    color: #fff;
     text-transform: uppercase;
+    font-size: 1.5rem;
+    background-color: #cacaca;
 }
 
 nav ul::after {
@@ -477,7 +478,7 @@ nav > ul > li > a {
 }
 
 /* texte avant formulaire */
-#contact p {
+#contact>p {
     margin: 50px 0 80px;
     color: #6c6c6c;
     text-align: center;
@@ -486,8 +487,20 @@ nav > ul > li > a {
     font-weight: 100;
 }
 
+#contact textarea {
+    margin-bottom: 8px;
+}
 
+/* champs invalides */
+.invalid {
+    border: 1px solid #ff6b70;
+}
 
+#form-contact p {
+    color: #ff6b70;
+    font-size: 0.8rem;
+    margin-top: 0;
+}
 
 /****************************/
 /* FORMULAIRES */
@@ -700,7 +713,7 @@ footer #img-footer p a {
 /*************************************************************************************************************************************/
 /*********************** VERSION MOBILE ***********************/
 /*************************************************************************************************************************************/
-@media only screen and (max-width: 625px) {
+@media only screen and (max-width: 768px) {
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
     .col-s-3 {width: 25%;}
@@ -719,10 +732,11 @@ footer #img-footer p a {
 
     /* menu navigation */
     nav {
-        width: 100%;
-        padding: 50px 15px 20px;
+        width: 80%;
+        padding: 40px 90px 0;
         height: 0;
         overflow: hidden;
+        border: 1px solid #cacaca;
     }
 
     nav a.mobile_menu {
@@ -741,8 +755,8 @@ footer #img-footer p a {
 
     nav > ul > li {
         float: none;
-        margin-top: 25px;
-        padding-bottom: 15px;
+        margin-top: 10px;
+        padding-bottom: 10px;
         border-bottom: 1px solid #cacaca;
     }
 
@@ -750,24 +764,25 @@ footer #img-footer p a {
         background: none;
     }
 
-    nav ul li a {
-        display: block;
-        margin: 2px 0;
-        padding: 2px;
-        /*border-bottom: 1px solid #cacaca;*/
-        width: auto;
+    /*nav ul li a {*/
+        /*display: block;*/
+        /*margin: 2px 0;*/
+        /*padding: 2px;*/
+        /*width: auto;*/
+    /*}*/
+
+    /*nav a[aria-haspopup="true"]::after {*/
+        /*display: none;*/
+    /*}*/
+
+
+    nav ul>li {
+        font-size: 1.5rem;
     }
 
-    nav ul ul ul li a {
-        margin-left: 60px;
+    nav ul ul li {
+        font-size: 1.2rem;
     }
-
-    nav a[aria-haspopup="true"]::after {
-        display: none;
-    }
-
-
-
 
     /*nav {*/
         /*margin: 80px auto;*/

@@ -8,7 +8,7 @@ $ (document).ready(function(){
 
         if( currentNAvHeight < 5){
 
-            var newNavHeight = $('nav > ul').height() + 15;
+            var newNavHeight = $('nav > ul').height() + 51;
             $('nav').animate({'height': newNavHeight + 'px'}, 750);
         }else {
             $('nav').animate({'height':'0px'}, 750, function () {
