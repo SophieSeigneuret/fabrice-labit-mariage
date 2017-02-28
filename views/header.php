@@ -1,9 +1,10 @@
 <header class="wrapper">
-    <div id="social-link-header">
-        <a href="https://twitter.com/fabricelabit" target="_blank"><img src="images/social_twitter_gris.gif" alt="logo twitter gris"></a>
-        <a href="https://fr.pinterest.com/fabricelabit/" target="_blank"><img src="images/social_pinterest_gris.gif" alt="logo pinterest gris"></a>
-        <a href="https://www.instagram.com/fabricelabit/" target="_blank"><img src="images/social_instagram_gris.gif" alt="logo instagram gris"></a>
-        <a href="https://www.facebook.com/fabricelabitmariage/" target="_blank"><img src="images/social_facebook_gris.gif" alt="logo facebook gris"></a>
+    <div id="social-link-header" class="row">
+        <div class="col-8"></div>
+        <a href="https://www.facebook.com/fabricelabitmariage/" target="_blank" class="col-1 col-s-3"><img src="images/social_facebook_gris.gif" alt="logo facebook gris"></a>
+        <a href="https://www.instagram.com/fabricelabit/" target="_blank" class="col-1 col-s-3"><img src="images/social_instagram_gris.gif" alt="logo instagram gris"></a>
+        <a href="https://fr.pinterest.com/fabricelabit/" target="_blank" class="col-1 col-s-3"><img src="images/social_pinterest_gris.gif" alt="logo pinterest gris"></a>
+        <a href="https://twitter.com/fabricelabit" target="_blank" class="col-1 col-s-3"><img src="images/social_twitter_gris.gif" alt="logo twitter gris"></a>
     </div>
     <div id="logo-header">
         <a href="index.php"><img src="images/logo-fabrice-labit-mariage.jpg" alt="logo Fabrice Labit Mariage"></a>

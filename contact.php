@@ -3,11 +3,6 @@ require_once 'defines.php';
 
 $choix_reponses = array ('Votre choix', 'Internet', 'Recommandation', 'Bouche à oreille');
 
-// remplace les caractères accentués d'une chaine par leur équivalent sans accent
-function retire_accent ($str) {
-    $resultat = strtolower(str_replace(array('é','è','ï','à'), array('e','e','i','a'), $str));
-    return $resultat;
-}
 
 
 // Affichage initial du formulaire ? ou bien réception des données ?
@@ -16,8 +11,7 @@ $en_reception = array_key_exists('nom', $_POST)
     && array_key_exists('email', $_POST)
     && array_key_exists('date', $_POST)
     && array_key_exists('lieu', $_POST)
-//    && array_key_exists('type', $_POST)
-    && array_key_exists('budget', $_POST)
+//    && array_key_exists('budget', $_POST)
     && array_key_exists('reponse', $_POST)
     && array_key_exists('message', $_POST);
 
@@ -32,7 +26,7 @@ if (array_key_exists('nom', $_POST)) {
 //telephone
 $telephone = '';
 $telephone_valide = true;
-if(array_key_exists('telephone', $_POST)){
+if(array_key_exists('telephone', $_POST)) {
     $telephone = filter_input(INPUT_POST, 'telephone' , FILTER_SANITIZE_STRING);
     $telephone_valide = (1 === preg_match('/^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$/', $telephone));
 }
@@ -50,7 +44,8 @@ $date = '';
 $date_valide = true;
 if (array_key_exists('date', $_POST)) {
     $date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
-    $date_valide = (1 === preg_match('/^\d{1,2}/\d{1,2}/\d{4}$/', $date));
+    $regex = '/^\d{1,2}/\d{1,2}/\d{4}$/';
+    $date_valide = (1 === preg_match($regex, $date));
 }
 
 // Réception du lieu
@@ -67,27 +62,28 @@ $type_valide = true;
 if (array_key_exists('type', $_POST)) {
     $type = $_POST['type'];
 }
-// type valide si affichage initial ou si au moins 1 case est cochée
+    // type valide si affichage initial ou si au moins 1 case est cochée
 if ($en_reception && empty($type)) {
     $type_valide = false;
 }
 
-//// reception comment m'avez-vous connu
-//$reponse_valide = true;
-//$reponse = '';
-//if (array_key_exists('reponse', $_POST)) {
-//    $reponse = $_POST['reponse'];
-//}
-//// reponse valide si affichage initial ou si au moins 1 réponse sélectionnée
-//if ($en_reception && empty($reponse)) {
-//    $reponse_valide = false;
-//}
+// reception du budget
+$budget = array();
+$budget_valide = true;
+if (array_key_exists('budget', $_POST)) {
+    $budget = $_POST['budget'];
+}
+if ($en_reception && empty($budget)) {
+    $budget_valide = false;
+}
 
 // reception comment m'avez-vous connu
 $reponse_valide = true;
 $reponse = '';
-if($_POST['reponse'] == 'Vot') {
-    $reponse_valide = false;
+if (array_key_exists('reponse', $_POST)) {
+    if( $_POST['reponse'] == 'vot') {
+        $reponse_valide = false;
+    }
 }
 
 // Réception du message
@@ -150,17 +146,17 @@ require_once 'views/header.php';
     <form action="contact.php" id="form-contact" method="post">
         <!-- champ nom -->
         <div class="row">
-            <label for="nom" class="col-3">Prénom, nom</label>
-            <input type="text" name="nom" id="nom" placeholder="prénom et nom" value="<?= $nom ?>" class="col-9 <?= $nom_valide ? '' : 'invalid' ?>" />
+            <label for="nom" class="col-3">Prénom, nom <?= ! $nom_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="text" name="nom" id="nom" placeholder="prénom et nom" value="<?= $nom ?>" class="col-9" />
             <?php if(! $nom_valide) { ?>
                 <p class="col-3"></p>
-                <p class="col-9">Oups, champs non rempli</p> <!-- message d'erreur si champ vide -->
+                <p class="col-9">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
             <?php } ?>
         </div>
         <!-- champ téléphone -->
         <div class="row">
-            <label for="telephone" class="col-3">Téléphone</label>
-            <input type="tel" name="telephone" id="telephone" value="<?= $telephone ?>" class="col-9 <?= $telephone_valide ? '' : 'invalid' ?>" />
+            <label for="telephone" class="col-3">Téléphone <?= ! $telephone_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="tel" name="telephone" id="telephone" value="<?= $telephone ?>" class="col-9" />
             <?php if(! $telephone_valide) { ?>
                 <p class="col-3"></p>
                 <p class="col-9">Téléphone au format 06 12 34 56 78 ou +336 12 34 56 78</p> <!-- message d'erreur si champ incorrect -->
@@ -168,8 +164,8 @@ require_once 'views/header.php';
         </div>
         <!-- champ email -->
         <div class="row">
-            <label for="email" class="col-3">Email</label>
-            <input type="email" name="email" id="email" value="<?= $email ?>" class="col-9 <?= $email_valide ? '' : 'invalid' ?>" />
+            <label for="email" class="col-3">Email <?= ! $email_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="email" name="email" id="email" value="<?= $email ?>" class="col-9" />
             <?php if(! $email_valide) { ?>
                 <p class="col-3"></p>
                 <p class="col-9">Format de mail incorrect</p> <!-- message d'erreur si champ incorrect -->
@@ -177,41 +173,45 @@ require_once 'views/header.php';
         </div>
         <!-- champ date événement -->
         <div class="row">
-            <label for="date" class="col-3">Date de l'événement</label>
-            <input type="text" name="date" id="date" class="col-9" placeholder="au format JJ/MM/AAAA" value="" />
+            <label for="date" class="col-3">Date de l'événement <?= ! $date_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="text" name="date" id="date" class="col-9" placeholder="JJ/MM/AAAA" value="<?=$date?>" />
+            <?php if(! $date_valide) { ?>
+                <p class="col-3"></p>
+                <p class="col-9">Merci de remplir le champs au format JJ/MM/AAAA</p> <!-- message d'erreur si champ vide -->
+            <?php } ?>
         </div>
         <!-- champ lieu événement -->
         <div class="row">
-            <label for="lieu" class="col-3">Lieu de l'événement</label>
-            <input type="text" name="lieu" id="lieu" value="<?= $lieu ?>" class="col-9 <?= $lieu_valide ? '' : 'invalid' ?>" />
+            <label for="lieu" class="col-3">Lieu de l'événement <?= ! $lieu_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="text" name="lieu" id="lieu" value="<?= $lieu ?>" class="col-9" />
             <?php if(! $lieu_valide) { ?>
                 <p class="col-3"></p>
-                <p class="col-9">Oups, champs non rempli</p> <!-- message d'erreur si champ vide -->
+                <p class="col-9">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
             <?php } ?>
         </div>
         <!-- champ type d'événement -->
-        <div class="row <?= $type_valide ? '' : 'invalid' ?>">
-            <label class="col-3">Type d'événement</label>
+        <div class="row">
+            <label class="col-3">Type d'événement <?= ! $type_valide ? '<span class="invalid">*</span>' : '' ?></label>
             <div class="col-2 type-check">
                 <input type="checkbox" name="type[]" id="mariage" value="mariage"
                     <?= array_key_exists('type', $_POST) && in_array('mariage', $_POST['type']) ? 'checked="checked"' : '' ?>
                 />
                 <label for="mariage">Mariage</label>
             </div>
-            <div class="col-2 type-check">
+            <div class="col-7 type-check">
                 <input type="checkbox" name="type[]" id="engagement" value="engagement"
                     <?= array_key_exists('type', $_POST) && in_array('engagement', $_POST['type']) ? 'checked="checked"' : '' ?>
                 />
                 <label for="engagement">Engagement</label>
-                <?php if(! $type_valide) { ?>
-                    <p class="col-3"></p>
-                    <p class="col-9">Cochez au moins 1 case</p> <!-- message d'erreur si case non cochée -->
-                <?php } ?>
             </div>
+            <?php if(! $type_valide) { ?>
+                <p class="col-3"></p>
+                <p class="col-9">Cochez au moins 1 case</p> <!-- message d'erreur si case non cochée -->
+            <?php } ?>
         </div>
         <!-- champ budget -->
         <div class="row">
-            <label class="col-3">Votre budget photographe</label>
+            <label class="col-3">Votre budget photographe <?= ! $budget_valide ? '<span class="invalid">*</span>' : '' ?></label>
             <div class="col-2 type-radio">
                 <input type="radio" name="budget" id="1700" value="1700" />
                 <label for="1700">< 1700€</label>
@@ -224,29 +224,34 @@ require_once 'views/header.php';
                 <input type="radio" name="budget" id="2200" value="2200" />
                 <label for="2200">> 2200€</label>
             </div>
+            <?php if(! $budget_valide) { ?>
+                <p class="col-3"></p>
+                <p class="col-9">Merci de cocher 1 case</p> <!-- message d'erreur si case non cochée -->
+            <?php } ?>
         </div>
         <!-- champ question comment m'avez-vous connu -->
         <div class="row">
-            <label for="reponse" class="col-3">Comment m'avez-vous connu ?</label>
-            <select name="reponse" id="reponse" class="col-9 <?= $reponse_valide ? '' : 'invalid' ?>">
+            <label for="reponse" class="col-3">Comment m'avez-vous connu ? <?= ! $reponse_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <select name="reponse" id="reponse" class="col-9">
                 <?php foreach ($choix_reponses as $rep) {
                     $option_value = strtolower(substr($rep, 0, 3));
                     ?>
                     <option value="<?= $option_value ?>"
-                        <?= array_key_exists('reponse', $_POST) && in_array($option_value, $_POST['reponse']) ? 'selected="selected"' : '' ?>
+                        <?= array_key_exists('reponse', $_POST) && in_array($option_value, $_POST) ? 'selected="selected"' : '' ?>
                     ><?= $rep ?></option>
                 <?php } ?>
             </select>
             <?php if(! $reponse_valide) { ?>
-                <p>Sélectionnez une réponse</p>
+                <p class="col-3"></p>
+                <p class="col-9">Merci de sélectionner une réponse</p>
             <?php } ?>
         </div>
         <!-- champ message -->
         <div class="row">
-            <label for="message" class="col-12">Votre message</label>
-            <textarea name="message" id="message" rows="8" class="col-12 <?= $lieu_valide ? '' : 'invalid' ?>"></textarea>
+            <label for="message" class="col-12">Votre message <?= ! $message_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <textarea name="message" id="message" rows="8" class="col-12"></textarea>
             <?php if(! $message_valide) { ?>
-                <p class="col-12">Oups, champs non rempli</p> <!-- message d'erreur si champ vide -->
+                <p class="col-12">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
             <?php } ?>
         </div>
         <input type="submit" name="submit" value="Envoyer">

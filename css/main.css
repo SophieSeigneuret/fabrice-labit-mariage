@@ -87,14 +87,15 @@ li {
     border-bottom: 1px solid #cacaca;
 }
 
+#social-link-header div {
+    height: 2px;
+}
+
 #social-link-header img {
     margin-top: 15px;
 }
 
 #social-link-header a {
-    display: inline-block;
-    margin: 0 30px;
-    float: right;
     text-align: center;
 }
 
@@ -200,62 +201,6 @@ nav > ul > li > a {
 
 
 
-/* menu navigation */
-/*nav {*/
-/*margin: 80px auto;*/
-/*text-align: center;*/
-/*}*/
-
-/*nav #menu>li {*/
-/*display: inline-block;*/
-/*position: relative;*/
-/*font-size: 1.2rem;*/
-/*font-weight: 300;*/
-/*}*/
-
-/*nav  #menu ul li {*/
-/*display: inherit;*/
-/*text-align: left;*/
-/*font-size: 0.9rem;*/
-/*text-transform: uppercase;*/
-/*}*/
-
-/*nav #menu ul{*/
-/*position:absolute;*/
-/*width: 400px;*/
-/*z-index: 1000;*/
-/*max-height:0;*/
-/*left: 0;*/
-/*right: 0;*/
-/*overflow:hidden;*/
-/*-moz-transition: .4s all .1s;*/
-/*-webkit-transition: .4s all .1s;*/
-/*transition: .4s all .1s;*/
-/*}*/
-
-/*nav #menu li:hover ul {*/
-/*max-height: 120px;*/
-/*}*/
-
-/*nav #menu li a:hover {*/
-/*color: #6c6c6c;*/
-/*}*/
-
-/*nav #menu a {*/
-/*text-decoration:none;*/
-/*display:block;*/
-/*padding:5px 38px;*/
-/*color: #cacaca;*/
-
-/*}*/
-
-/*nav #menu li:hover li a {*/
-/*text-transform: inherit;*/
-/*}*/
-
-
-
-
 /****************************/
 /* MAIN GLOBAL */
 /****************************/
@@ -290,18 +235,18 @@ nav > ul > li > a {
 /****************************/
 
 
-#carousel {
+#accueil section {
     text-align: center;
 }
 
-#carousel img {
+#accueil section img {
     width: 800px;
     padding: 20px;
     border: 1px solid #cacaca;
 }
 
 /* citation */
-#carousel h4 {
+#accueil section h4 {
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
@@ -311,7 +256,7 @@ nav > ul > li > a {
 }
 
 /* auteur citation */
-#carousel h5 {
+#accueil section h5 {
     font-size: 0.8rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -321,11 +266,11 @@ nav > ul > li > a {
 }
 
 /* aside à propos du photographe */
-#a-propos-photographe {
+#accueil aside {
     margin-top: 100px;
 }
 
-#a-propos-photographe div {
+#accueil aside div {
     height: 160px;
     padding-left: 30px;
     text-align: justify;
@@ -333,7 +278,7 @@ nav > ul > li > a {
     border-bottom: 1px solid #cacaca;
 }
 
-#a-propos-photographe div h3 {
+#accueil aside div h3 {
     font-size: 1.2rem;
     font-weight: 400;
     color: #6c6c6c;
@@ -341,21 +286,21 @@ nav > ul > li > a {
     margin: 10px 0;
 }
 
-#a-propos-photographe div p {
+#accueil aside div p {
     color: #6c6c6c;
     font-size: 0.9rem;
     font-weight: 300;
     margin: 10px 0;
 }
 
-#a-propos-photographe div a {
+#accueil aside div a {
     color: #cacaca;
     font-size: 0.9rem;
     font-weight: 300;
     margin: 10px 0;
 }
 
-#a-propos-photographe div a:hover {
+#accueil aside div a:hover {
     color: #6c6c6c;
 }
 
@@ -455,6 +400,9 @@ nav > ul > li > a {
 
 
 
+
+
+
 /****************************/
 /* MAIN PAGE CONTACT */
 /****************************/
@@ -487,13 +435,13 @@ nav > ul > li > a {
     font-weight: 100;
 }
 
-#contact textarea {
-    margin-bottom: 8px;
+#form-contact>div:nth-of-type(6) p, #form-contact>div:nth-of-type(9) p {
+    margin-top: 8px;
 }
 
 /* champs invalides */
 .invalid {
-    border: 1px solid #ff6b70;
+    color: #ff6b70;
 }
 
 #form-contact p {
@@ -502,14 +450,17 @@ nav > ul > li > a {
     margin-top: 0;
 }
 
+
+
+
+
+
+
+
 /****************************/
 /* FORMULAIRES */
 /****************************/
 
-
-
-
-/****** formulaire contact ******/
 #form-contact>div, #form-temoignage>div {
     margin: 30px 0;
 }
@@ -534,7 +485,7 @@ nav > ul > li > a {
 }
 
 /* select */
-#form-contact select {
+#form-contact select, #form-contact textarea {
     border-color: #cacaca;
 }
 
@@ -560,6 +511,11 @@ nav > ul > li > a {
     text-transform: uppercase;
     margin-top: 80px;
 }
+
+#form-contact input:focus, #form-contact select:focus, #form-contact textarea:focus, #laisser-temoignage input:focus, #laisser-temoignage textarea:focus {
+    outline: none;
+}
+
 
 
 
@@ -638,9 +594,21 @@ footer #img-footer h3 {
 }
 
 /* photos footer */
-footer #img-footer a:first-of-type, footer #img-footer a:nth-of-type(2), footer #img-footer a:nth-of-type(3) {
-    display: inline-block;
-    margin-right: 13px;
+/*footer #img-footer a:first-of-type, footer #img-footer a:nth-of-type(2), footer #img-footer a:nth-of-type(3) {*/
+    /*display: inline-block;*/
+    /*margin-right: 13px;*/
+/*}*/
+
+footer #img-footer img {
+    width: 96%;
+}
+
+footer #img-footer div a:nth-of-type(2) {
+    margin: 0 4px 0 -2px;
+}
+
+footer #img-footer div a:nth-of-type(3) {
+    margin-right: -2px;
 }
 
 /* copyright */
@@ -686,9 +654,38 @@ footer #img-footer p a {
         margin: 0 auto;
     }
 
-    #carousel img {
+    #accueil section img {
         width: 100%;
     }
+
+    #accueil section div {
+        padding: 0 20px;
+    }
+
+
+    /**** aside photographe ****/
+    #accueil aside img {
+        padding-left: 10px;
+    }
+
+    #accueil aside div p {
+        padding-right: 10px;
+    }
+
+
+    /* footer */
+    #social-link-footer div:first-of-type a {
+        margin: 0 15px;
+    }
+
+    #social-link-footer div:first-of-type {
+        padding-left: 0;
+    }
+
+    #social-link-footer div:last-of-type {
+        padding-right: 0;
+    }
+
 
 
 
@@ -727,10 +724,35 @@ footer #img-footer p a {
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
 
+    
+    
+    /**** header ****/
+    #social-link-header div {
+        display: none;
+    }
+
+    #social-link-header a:nth-of-type(2) {
+        padding-right: 50px;
+    }
+
+    #social-link-header a:nth-of-type(3) {
+        padding-left: 50px;
+    }
+    
+    
+    /**** aside photographe ****/
+    #accueil aside img {
+        padding-left: 20px;
+    }
+
+    #accueil aside div p {
+        padding-right: 20px;
+    }
+    
+    
 
 
-
-    /* menu navigation */
+    /**** menu navigation ****/
     nav {
         width: 80%;
         padding: 40px 90px 0;
@@ -771,9 +793,9 @@ footer #img-footer p a {
         /*width: auto;*/
     /*}*/
 
-    /*nav a[aria-haspopup="true"]::after {*/
-        /*display: none;*/
-    /*}*/
+    nav a[aria-haspopup="true"]::after {
+        display: none;
+    }
 
 
     nav ul>li {
@@ -784,53 +806,64 @@ footer #img-footer p a {
         font-size: 1.2rem;
     }
 
-    /*nav {*/
-        /*margin: 80px auto;*/
-        /*text-align: center;*/
-    /*}*/
 
-    /*nav #menu>li {*/
-        /*display: block;*/
-        /*font-size: 1.5rem;*/
-    /*}*/
+    /* footer */
+    #social-link-footer div:first-of-type a {
+        margin: 0 10px;
+    }
 
-    /*nav  #menu ul li {*/
-        /*text-align: center;*/
-        /*font-size: 1.2rem;*/
-    /*}*/
-
-    /*nav #menu ul{*/
-    /*position:absolute;*/
-    /*width: 100%;*/
-    /*z-index: 1000;*/
-    /*max-height:0;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*overflow: visible;*/
-    /*-moz-transition: .4s all .1s;*/
-    /*-webkit-transition: .4s all .1s;*/
-    /*transition: .4s all .1s;*/
-    /*}*/
-
-    /*nav #menu li:hover ul {*/
-        /*max-height: 120px;*/
-    /*}*/
-
-    /*nav #menu li a:hover {*/
-        /*color: #6c6c6c;*/
-    /*}*/
-
-    /*nav #menu a {*/
-        /*text-decoration:none;*/
-        /*display:block;*/
-    /*}*/
-
-    /*nav #menu li:hover li a {*/
-        /*text-transform: inherit;*/
-    /*}*/
 
 
 
 
 
 }
+
+
+
+
+
+
+
+/*************************************************************************************************************************************/
+/*********************** VERSION MOBILE XS ***********************/
+/*************************************************************************************************************************************/
+
+
+@media only screen and (max-width: 550px) {
+    .col-xs-1 {width: 8.33%;}
+    .col-xs-2 {width: 16.66%;}
+    .col-xs-3 {width: 25%;}
+    .col-xs-4 {width: 33.33%;}
+    .col-xs-5 {width: 41.66%;}
+    .col-xs-6 {width: 50%;}
+    .col-xs-7 {width: 58.33%;}
+    .col-xs-8 {width: 66.66%;}
+    .col-xs-9 {width: 75%;}
+    .col-xs-10 {width: 83.33%;}
+    .col-xs-11 {width: 91.66%;}
+    .col-xs-12 {width: 100%;}
+
+
+
+    /* footer */
+    #social-link-footer div:first-of-type a {
+        margin: 0 5px;
+    }
+
+    #img-footer h3, #img-footer div {
+        display: none;
+    }
+
+    footer #img-footer p {
+        border: none;
+    }
+
+}
+
+
+
+
+
+
+
