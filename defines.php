@@ -4,3 +4,4 @@
  */
 
 define('NOM_SITE', 'Fabrice Labit Mariage');
+define('IMG_PATH', 'images/uploads-img/');

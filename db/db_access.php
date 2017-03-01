@@ -41,10 +41,9 @@ function get_photos_by_album($album_id) {
     if ($res && ($res->num_rows > 0)) {
         while ($photos = $res->fetch_assoc()) {
             $data[$photos['id']] = $photos;
-            var_dump($photos);
         }
     }
-    var_dump($data);
+    //var_dump($data);
     return $data;
 }
 
@@ -54,7 +53,6 @@ function get_photos_by_category($category_id) {
     // Rédaction de la requete sur les photos
     $query_str = "Select photos.id, photos.nom_photo, photos.ordre, photos.date, category.nom from photos
     INNER JOIN category ON photos.category_id = category.id where category.id =" . $category_id;
-    var_dump($query_str);
 
     $res = $mysqli->query($query_str); // Exécution de la requête
 
@@ -63,10 +61,9 @@ function get_photos_by_category($category_id) {
     if ($res && ($res->num_rows > 0)) {
         while ($photos = $res->fetch_assoc()) {
             $data[$photos['id']] = $photos;
-            var_dump($photos);
         }
     }
-    var_dump($data);
+    //var_dump($data);
     return $data;
 }
 

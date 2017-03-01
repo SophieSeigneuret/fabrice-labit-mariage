@@ -16,9 +16,9 @@
             <li><a href="index.php">ACCUEIL</a></li>
             <li><a href="#">PORTFOLIO</a>
                 <ul>
-                    <li><a href="#">Préparatifs</a></li>
+                    <li><a href="preparatifs.php">Préparatifs</a></li>
                     <li><a href="mariage.php">Mariage</a></li>
-                    <li><a href="#">Engagement</a></li>
+                    <li><a href="engagement.php">Engagement</a></li>
                 </ul>
             </li>
             <li><a href="apropos.php">A PROPOS</a>

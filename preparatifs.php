@@ -1,9 +1,8 @@
 <?php
 require_once 'defines.php';
 require_once 'db/db_access.php';
-// get_photos_by_category(2);
 
-$photos = get_photos_by_category(2);
+$photos = get_photos_by_category(1);
 //var_dump($photos);
 
 
@@ -13,7 +12,7 @@ $photos = get_photos_by_category(2);
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Photos de mariages par Fabrice Labit</title>
+    <title>Photos des préparatifs de mariage par Fabrice Labit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,400i" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -21,7 +20,7 @@ $photos = get_photos_by_category(2);
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/gif" href="images/logo_icon.gif"/>
     <meta name="description"
-          content="A la mairie, à l'église, à la réception, en soirée, en intérieur ou extérieur, Fabrice Labit retrace en photos votre journée de mariage"/>
+          content="Fabrice Labit est présent dès les préparatifs de mariage qui font partie intégrante de cette journée : maquillage, habillage, ou encore décoration."/>
     <!-- balises Open Graph Facebook -->
     <meta property="og:url" content="http://www.fabrice-labit-mariage.com/index.php"/>
     <meta property="og:title" content="Fabrice Labit | Photographe de mariage"/>
@@ -35,7 +34,7 @@ require_once 'views/header.php';
 ?>
 
 <main class="wrapper" id="mariage">
-    <h2>Mariage</h2>
+    <h2>Préparatifs</h2>
     <div class="row" id="my-gallery-container">
 
         <?php foreach ($photos as $id => $photo) { ?>
