@@ -9,7 +9,7 @@
         </div>
         <div class="col-5 col-s-5">
             <a href="http://mariageetsavoirfaire.com/" target="_blank"><img src="images/logo-mariage-savoir-faire.gif" alt="logo Mariage et Savoir-faire"></a>
-            <p>Membre du collectif Mariage et Savoir-faire</p>
+            <p>Membre <br/>du collectif Mariage et Savoir-faire</p>
         </div>
     </div>
     <div id="img-footer">

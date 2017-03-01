@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <title>A propos de Fabrice Labit | Photographe de mariage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -30,8 +30,8 @@ require_once 'views/header.php';
 <main class="wrapper" id="apropos">
     <h2>A propos de moi</h2>
     <div class="row">
-        <img src="images/photo-fabrice-labit-big.jpg" alt="photo Fabrice Labit" class="col-4">
-        <div class="col-8">
+        <img src="images/photo-fabrice-labit-big.jpg" alt="photo Fabrice Labit" class="col-4"><!--
+     --><div class="col-8">
             <p>Il est très important pour ce jour unique d'avoir l'assurance de faire appel à un photographe professionnel
                 pour que votre journée soit capturée dans les meilleures conditions quelles que soient les circonstances. En
                 observateur discret, je couvre les mariages en mode photoreportage. </p>

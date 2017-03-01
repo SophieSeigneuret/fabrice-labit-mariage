@@ -15,7 +15,7 @@ $photos = get_photos_by_category(2);
     <meta charset="UTF-8">
     <title>Photos de mariages par Fabrice Labit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -39,7 +39,7 @@ require_once 'views/header.php';
     <div class="row" id="my-gallery-container">
 
         <?php foreach ($photos as $id => $photo) { ?>
-            <div class="item col-4">
+            <div class="item col-4 col-m-6 col-s-12">
                 <a href="#"><img src="<?= IMG_PATH, $photo['nom_photo'] ?>" alt="photo mariage"></a>
             </div>
 

@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Laissez votre témoignage à Fabrice Labit | Photographe de mariage</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -40,27 +40,27 @@ require_once 'views/header.php';
         <p>Je vous serais très reconnaissant de me laisser un témoignage de sympathie et dire si vous avez apprécié mon travail.</p>
         <form action="" id="form-temoignage">
             <div class="row">
-                <label for="nom" class="col-3">Prénoms du couple</label>
-                <input type="text" name="nom" id="nom" class="col-9" value="" placeholder="exemple : Camille & Fabrice" />
+                <label for="nom" class="col-3 col-m-4 col-s-12">Prénoms du couple</label>
+                <input type="text" name="nom" id="nom" class="col-9 col-m-8 col-s-12" value="" placeholder="exemple : Camille & Fabrice" />
             </div>
             <div class="row">
-                <label for="email" class="col-3">Email</label>
-                <input type="email" name="email" id="email" class="col-9" value="" />
+                <label for="email" class="col-3 col-m-4 col-s-12">Email</label>
+                <input type="email" name="email" id="email" class="col-9 col-m-8 col-s-12" value="" />
             </div>
             <div class="row">
-                <label class="col-3">Type d'événement</label>
-                <div class="col-2 type-check">
+                <label class="col-3 col-m-4 col-s-12">Type d'événement</label>
+                <div class="col-2 col-m-3 col-s-6 type-check">
                     <input type="checkbox" name="mariage" id="mariage" value="mariage" />
                     <label for="mariage">Mariage</label>
                 </div>
-                <div class="col-2 type-check">
+                <div class="col-2 col-m-4 col-s-6 type-check">
                     <input type="checkbox" name="engagement" id="engagement" value="engagement" />
                     <label for="engagement">Engagement</label>
                 </div>
             </div>
             <div class="row">
-                <label for="lieu" class="col-3">Lieu de l'événement</label>
-                <input type="text" name="lieu" id="lieu" class="col-9" value="" />
+                <label for="lieu" class="col-3 col-m-4 col-s-12">Lieu de l'événement</label>
+                <input type="text" name="lieu" id="lieu" class="col-9 col-m-8 col-s-12" value="" />
             </div>
             <div class="row">
                 <label for="message" class="col-12">Votre témoignage</label>

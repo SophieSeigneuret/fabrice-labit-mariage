@@ -11,7 +11,7 @@
 /*}*/
 
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Comfortaa', cursive;
     font-weight: 300;
     font-size: 16px;
 }
@@ -112,9 +112,10 @@ li {
 }
 
 #logo-header h1 {
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    margin: 0px;
-    font-size: 26px;
+    margin: 0;
+    font-size: 1.5rem;
     position: relative;
     top: -20px;
 }
@@ -122,7 +123,7 @@ li {
 
 /**** menu navigation ****/
 nav {
-    margin: 80px auto;
+    margin: 50px auto 80px;
     position: relative;
     width: 782px;
 }
@@ -156,11 +157,11 @@ nav ul li:hover > ul {
 }
 
 nav ul>li {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 nav ul ul li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 nav ul li a {
@@ -217,14 +218,14 @@ nav > ul > li > a {
 /* titres */
 #apropos h2, #faq h2, #temoignages h2, #laisser-temoignage h2, #mariage h2 {
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 100;
+    font-size: 1rem;
+    font-weight: 300;
     color: #6c6c6c;
     text-transform: uppercase;
     border-top: 1px solid #cacaca;
     border-bottom: 1px solid #cacaca;
     padding: 10px 0;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 
@@ -248,8 +249,8 @@ nav > ul > li > a {
 /* citation */
 #accueil section h4 {
     font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
     font-style: italic;
     color: #cacaca;
     margin: 30px 0 5px;
@@ -258,7 +259,7 @@ nav > ul > li > a {
 /* auteur citation */
 #accueil section h5 {
     font-size: 0.8rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Comfortaa', cursive;
     font-weight: 400;
     color: #6c6c6c;
     text-transform: uppercase;
@@ -289,6 +290,7 @@ nav > ul > li > a {
 #accueil aside div p {
     color: #6c6c6c;
     font-size: 0.9rem;
+    line-height: 1.2rem;
     font-weight: 300;
     margin: 10px 0;
 }
@@ -341,29 +343,46 @@ nav > ul > li > a {
 /****************************/
 
 /* à propos de moi */
+/*#apropos>div img, #apropos>div div {*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+/*}*/
+
+/*#apropos>div img {*/
+    /*width: 25%;*/
+/*}*/
+
+/*#apropos>div div {*/
+    /*width: 75%;*/
+/*}*/
+
 #apropos p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
     margin-top: 0;
     color: #6c6c6c;
-    padding-left: 40px;
+    padding-left: 30px;
     text-align: justify;
 }
 
 /* FAQ */
 #faq div:last-of-type {
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 #faq div:last-of-type h3 {
+    font-size: 1rem;
     margin: 20px 0 5px;
     text-transform: uppercase;
     font-weight: 300;
 }
 
 #faq div:last-of-type p {
+    font-size: 0.9rem;
     margin: 0 0 30px;
     color: #6c6c6c;
     text-align: justify;
-    font-weight: 100;
+    font-weight: 300;
     padding-bottom: 30px;
     border-bottom: 1px solid #cacaca;
 }
@@ -381,16 +400,18 @@ nav > ul > li > a {
 
 #temoignages div h3, #temoignages div p {
     padding-left: 30px;
-    font-size: 1rem;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 #temoignages div h3 {
+    font-size: 1rem;
     text-transform: uppercase;
     margin: 0 0 10px;
 }
 
 #temoignages div p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
     color: #6c6c6c;
     text-align: justify;
     margin: 0;
@@ -416,11 +437,12 @@ nav > ul > li > a {
 
 /* texte avant formulaire */
 #laisser-temoignage p {
-    margin: 50px 0 80px;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin: 60px 0 80px;
     color: #6c6c6c;
     text-align: center;
-    padding-top: 50px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 
@@ -435,7 +457,7 @@ nav > ul > li > a {
 /* nom et coordonnées Fabrice */
 #contact h2 {
     text-align: center;
-    font-weight: 100;
+    font-weight: 300;
     font-style: italic;
     font-size: 1.3rem;
     color: #6c6c6c;
@@ -452,12 +474,14 @@ nav > ul > li > a {
 
 /* texte avant formulaire */
 #contact>p {
+    font-size: 0.9rem;
+    line-height:1.2rem;
     margin: 50px 0 80px;
     color: #6c6c6c;
     text-align: center;
     border-top: 1px solid #cacaca;
     padding-top: 50px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 #form-contact>div:nth-of-type(6) p, #form-contact>div:nth-of-type(9) p {
@@ -558,7 +582,7 @@ nav > ul > li > a {
 }
 
 #social-link-footer div:first-of-type {
-    margin-top: 30px;
+    margin-top: 28px;
     padding-left: 80px;
 }
 
@@ -584,7 +608,7 @@ nav > ul > li > a {
 /* mariage et savoir-faire */
 #social-link-footer div:last-of-type {
     border-left: 1px solid #6c6c6c;
-    margin-top: 7px;
+    margin-top: 10px;
     padding-right: 100px;
 }
 
@@ -602,7 +626,7 @@ nav > ul > li > a {
 }
 
 #social-link-footer div:last-of-type p {
-    width: 64px;
+    width: 77px;
     text-align: left;
     color: #6c6c6c;
     font-size: 0.8rem;
@@ -687,6 +711,10 @@ footer #img-footer p a {
         padding: 0 20px;
     }
 
+    .img-bouquets img {
+        width: 20%;
+    }
+
 
     /**** aside photographe ****/
     #accueil aside img {
@@ -698,7 +726,30 @@ footer #img-footer p a {
     }
 
 
-    /* footer */
+    /**** formulaire contact et laisser un temoignage ****/
+    #contact, #laisser-temoignage {
+        padding: 30px;
+    }
+
+
+
+
+
+    /**** footer ****/
+    #social-link-footer div:first-of-type a {
+        margin: 0 10px;
+    }
+
+
+
+
+    /**** faqs ****/
+    #faq div:last-of-type {
+        padding: 30px;
+    }
+
+
+    /**** footer ****/
     #social-link-footer div:first-of-type a {
         margin: 0 15px;
     }
@@ -710,6 +761,8 @@ footer #img-footer p a {
     #social-link-footer div:last-of-type {
         padding-right: 0;
     }
+
+
 
 
 
@@ -832,13 +885,34 @@ footer #img-footer p a {
     }
 
 
-    /* footer */
-    #social-link-footer div:first-of-type a {
-        margin: 0 10px;
+
+
+
+
+    /**** formulaire contact et laisser un temoignage ****/
+    #contact, #laisser-temoignage {
+        padding: 30px;
+    }
+
+    #form-contact label, #form-temoignage label {
+        text-align: center;
+
+    }
+
+    #form-contact input[type=text], #form-contact input[type=tel], #form-contact input[type=email], #form-contact select, #form-temoignage input[type=text], #form-temoignage input[type=email] {
+        top:2px;
+    }
+
+    #form-contact>div:nth-of-type(6) div, #form-contact>div:nth-of-type(7) div, #form-temoignage>div:nth-of-type(3) div {
+        text-align: center;
     }
 
 
 
+    /**** footer ****/
+    #social-link-footer div:first-of-type a {
+        margin: 0 10px;
+    }
 
 
 
@@ -874,6 +948,16 @@ footer #img-footer p a {
     /* footer */
     #social-link-footer div:first-of-type a {
         margin: 0 5px;
+        width: 38px;
+        height: 38px;
+    }
+
+    #social-link-footer div:first-of-type img {
+        width: 100%;
+    }
+
+    #social-link-footer div:last-of-type img {
+        width: 60px;
     }
 
     #img-footer h3, #img-footer div {
@@ -883,6 +967,8 @@ footer #img-footer p a {
     footer #img-footer p {
         border: none;
     }
+
+
 
 }
 
