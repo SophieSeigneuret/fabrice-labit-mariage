@@ -308,6 +308,16 @@ nav > ul > li > a {
 
 
 
+/****************************/
+/* MAIN PORTFOLIO */
+/****************************/
+
+#masonry_hybrid_demo3 .grid-item .grid-item-inner{
+    position: relative;
+    background: #ececec;
+    width: 100%;
+    height: 100%; }
+
 
 
 

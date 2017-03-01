@@ -17,7 +17,7 @@
             <li><a href="#">PORTFOLIO</a>
                 <ul>
                     <li><a href="#">Préparatifs</a></li>
-                    <li><a href="#">Mariage</a></li>
+                    <li><a href="mariage.php">Mariage</a></li>
                     <li><a href="#">Engagement</a></li>
                 </ul>
             </li>

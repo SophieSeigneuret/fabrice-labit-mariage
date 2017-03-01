@@ -25,4 +25,9 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="http://plugin.bearsthemes.com/jquery/MasonryHybrid/jquery-3.1.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script type="text/javascript" src="http://plugin.bearsthemes.com/jquery/MasonryHybrid/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="http://plugin.bearsthemes.com/jquery/MasonryHybrid/jquery.masonry-hybrid.min.js"></script>
 <script src="scripts/main.js"></script>
+

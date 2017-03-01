@@ -30,3 +30,23 @@ $ (document).ready(function(){
 
 
 
+
+
+var $grid_demo_resize = $('#masonry_hybrid_demo3');
+var grid3 = new MasonryHybrid($grid_demo_resize, {col: 3, space: 10});
+
+// Use resize
+var grid_resize = grid3.resize({
+    celHeight 	: 180,
+    sizeMap 	: [[2,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1],[1,1]],
+    resize 		: true,
+});
+
+// Get Size Map
+grid_resize.getSizeMap();
+
+// Set Size Map & apply Size Map
+grid_resize.setSizeMap([[2,2]]).applySize();
+
+// Filter
+grid3.grid.isotope({ filter: "filterValue" });
