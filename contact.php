@@ -1,9 +1,8 @@
 <?php
 require_once 'defines.php';
+//phpinfo();
 
 $choix_reponses = array ('Votre choix', 'Internet', 'Recommandation', 'Bouche à oreille');
-
-
 
 // Affichage initial du formulaire ? ou bien réception des données ?
 $en_reception = array_key_exists('nom', $_POST)
@@ -44,7 +43,8 @@ $date = '';
 $date_valide = true;
 if (array_key_exists('date', $_POST)) {
     $date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
-    $regex = '/^\d{1,2}/\d{1,2}/\d{4}$/';
+//    $regex = '/^\d{1,2}\/\d{1,2}\/\d{4}$/';
+    $regex = '/^(?:(?:31(\/|-| |\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-| |\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-| |\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-| |\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/';
     $date_valide = (1 === preg_match($regex, $date));
 }
 
@@ -62,13 +62,13 @@ $type_valide = true;
 if (array_key_exists('type', $_POST)) {
     $type = $_POST['type'];
 }
-    // type valide si affichage initial ou si au moins 1 case est cochée
+// type valide si affichage initial ou si au moins 1 case est cochée
 if ($en_reception && empty($type)) {
     $type_valide = false;
 }
 
 // reception du budget
-$budget = array();
+$budget = '';
 $budget_valide = true;
 if (array_key_exists('budget', $_POST)) {
     $budget = $_POST['budget'];
@@ -94,7 +94,76 @@ if (array_key_exists('message', $_POST)) {
     $message_valide = (1 === preg_match('/[A-Za-z]\w{0,}/', $message));
 }
 
+function envoi_mail() {
+    $passage_ligne = "\r\n";
 
+    $mail = 'frederic.minatchy@gmail.com'; // Déclaration de l'adresse de destination.
+
+//=====Déclaration des messages au format texte et au format HTML.
+    $message_txt = "Salut à tous, voici un e-mail envoyé par un script PHP.";
+    $message_html = "<html><head></head><body><b>Salut à tous</b>, voici un e-mail envoyé par un <i>script PHP</i>.</body></html>";
+//==========
+
+//=====Création de la boundary.
+    $boundary = "-----=".md5(rand());
+    $boundary_alt = "-----=".md5(rand());
+//==========
+
+//=====Définition du sujet.
+    $sujet = "Hey mon ami !!!!!!!!";
+//=========
+
+//=====Création du header de l'e-mail.
+    $header = "From: \"Frederic Minatchy\"<frederic.minatchy@gmail.com>".$passage_ligne;
+    $header.= "Reply-to: \"Frederic Minatchy\" <frederic.minatchy@gmail.com>".$passage_ligne;
+    $header.= "MIME-Version: 1.0".$passage_ligne;
+    $header.= "Content-Type: multipart/mixed;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
+//==========
+
+//=====Création du message.
+    $message = $passage_ligne."--".$boundary.$passage_ligne;
+    $message.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary_alt\"".$passage_ligne;
+    $message.= $passage_ligne."--".$boundary_alt.$passage_ligne;
+//=====Ajout du message au format texte.
+    $message.= "Content-Type: text/plain; charset=\"ISO-8859-1\"".$passage_ligne;
+    $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
+    $message.= $passage_ligne.$message_txt.$passage_ligne;
+//==========
+
+    $message.= $passage_ligne."--".$boundary_alt.$passage_ligne;
+
+//=====Ajout du message au format HTML.
+    $message.= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
+    $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
+    $message.= $passage_ligne.$message_html.$passage_ligne;
+//==========
+
+//=====On ferme la boundary alternative.
+    $message.= $passage_ligne."--".$boundary_alt."--".$passage_ligne;
+//==========
+
+
+
+    $message.= $passage_ligne."--".$boundary.$passage_ligne;
+
+//=====Envoi de l'e-mail.
+    if(mail($mail,$sujet,$message,$header))
+    {
+        echo "Mail envoyé";
+    }else {
+        echo "boulette";
+    }
+
+}
+
+
+if ($en_reception && $nom_valide && $telephone_valide && $email_valide && $date_valide
+    && $lieu_valide && $type_valide && $budget_valide && $reponse_valide && $message_valide) {
+    // les données de formulaire sont valides
+//    header('location:contact.php');
+    envoi_mail();
+    //exit;
+}
 
 
 
@@ -213,15 +282,15 @@ require_once 'views/header.php';
         <div class="row">
             <label class="col-3 col-m-4 col-s-12">Votre budget photographe <?= ! $budget_valide ? '<span class="invalid">*</span>' : '' ?></label>
             <div class="col-2 col-m-2 col-s-4 type-radio">
-                <input type="radio" name="budget" id="1700" value="1700" />
+                <input type="radio" name="budget" id="1700" value="1700" <?php if($_POST['budget']=="1700") echo "checked";?> />
                 <label for="1700">< 1700€</label>
             </div>
             <div class="col-3 col-m-3 col-s-4 type-radio">
-                <input type="radio" name="budget" id="2000" value="2000" />
+                <input type="radio" name="budget" id="2000" value="2000" <?php if($_POST['budget']=="2000") echo "checked";?> />
                 <label for="2000">1700€ - 2200€</label>
             </div>
             <div class="col-2 col-m-2 col-s-4 type-radio">
-                <input type="radio" name="budget" id="2200" value="2200" />
+                <input type="radio" name="budget" id="2200" value="2200" <?php if($_POST['budget']=="2200") echo "checked";?> />
                 <label for="2200">> 2200€</label>
             </div>
             <?php if(! $budget_valide) { ?>
@@ -249,7 +318,7 @@ require_once 'views/header.php';
         <!-- champ message -->
         <div class="row">
             <label for="message" class="col-12">Votre message <?= ! $message_valide ? '<span class="invalid">*</span>' : '' ?></label>
-            <textarea name="message" id="message" rows="8" class="col-12"></textarea>
+            <textarea name="message" id="message" rows="8" class="col-12"><?=$message?></textarea>
             <?php if(! $message_valide) { ?>
                 <p class="col-12">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
             <?php } ?>

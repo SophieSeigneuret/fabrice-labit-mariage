@@ -251,7 +251,7 @@ nav > ul > li > a {
     font-size: 1.5rem;
     font-family: 'Comfortaa', cursive;
     font-weight: 300;
-    font-style: italic;
+    /*font-style: italic;*/
     color: #cacaca;
     margin: 30px 0 5px;
 }
@@ -269,14 +269,15 @@ nav > ul > li > a {
 /* aside à propos du photographe */
 #accueil aside {
     margin-top: 100px;
-}
-
-#accueil aside div {
-    height: 160px;
-    padding-left: 30px;
-    text-align: justify;
     border-top: 1px solid #cacaca;
     border-bottom: 1px solid #cacaca;
+}
+
+#accueil aside div:last-of-type {
+    /*height: 160px;*/
+    padding-left: 30px;
+    text-align: justify;
+
 }
 
 #accueil aside div h3 {
@@ -436,7 +437,7 @@ nav > ul > li > a {
 }
 
 /* texte avant formulaire */
-#laisser-temoignage p {
+#laisser-temoignage>div:last-of-type>p {
     font-size: 0.9rem;
     line-height: 1.2rem;
     margin: 60px 0 80px;
@@ -493,7 +494,7 @@ nav > ul > li > a {
     color: #ff6b70;
 }
 
-#form-contact p {
+#form-contact p, #form-temoignage p {
     color: #ff6b70;
     font-size: 0.8rem;
     margin-top: 0;
@@ -666,6 +667,7 @@ footer #img-footer p {
     font-weight: 300;
     text-align: center;
     font-size: 0.8rem;
+    line-height: 1.1rem;
     border-top: 1px solid #cacaca;
     padding: 12px;
 }
@@ -885,7 +887,15 @@ footer #img-footer p a {
     }
 
 
+    /**** aside ****/
+    #accueil aside div img {
+        padding: 10px 0 10px 30px;
+        width: 200px;
+    }
 
+    #accueil aside div:last-of-type p {
+        padding-right: 30px;
+    }
 
 
 
@@ -946,10 +956,18 @@ footer #img-footer p a {
 
 
     /* footer */
+    #social-link-footer {
+        height: 75px;
+    }
+
+    #social-link-footer div:first-of-type {
+        margin-top: 20px;
+    }
+
     #social-link-footer div:first-of-type a {
         margin: 0 5px;
-        width: 38px;
-        height: 38px;
+        width: 35px;
+        height: 35px;
     }
 
     #social-link-footer div:first-of-type img {
@@ -957,7 +975,11 @@ footer #img-footer p a {
     }
 
     #social-link-footer div:last-of-type img {
-        width: 60px;
+        width: 50px;
+    }
+
+    #social-link-footer div:last-of-type p {
+        display: none;
     }
 
     #img-footer h3, #img-footer div {

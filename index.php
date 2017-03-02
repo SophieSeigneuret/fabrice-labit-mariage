@@ -36,8 +36,10 @@ require_once 'views/header.php';
         </div>
     </section>
     <aside class="row">
-        <img src="images/fabrice-labit.jpg" alt="photo de profil de Fabrice Labit" class="col-2 col-s-3 col-xs-4">
-        <div class="col-10 col-s-9 col-xs-8">
+        <div>
+            <img src="images/fabrice-labit.jpg" alt="photo de profil de Fabrice Labit" class="col-2 col-s-3 col-xs-12">
+        </div>
+        <div class="col-10 col-s-9 col-xs-12">
             <h3>A propos de moi</h3>
             <p>Il est très important pour ce jour unique d'avoir l'assurance de faire appel à un photographe
                 professionnel pour que votre journée soit capturée dans les meilleures conditions quelles que soient les
