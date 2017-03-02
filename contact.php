@@ -215,8 +215,8 @@ require_once 'views/header.php';
     <form action="contact.php" id="form-contact" method="post">
         <!-- champ nom -->
         <div class="row">
-            <label for="nom" class="col-3 col-m-4 col-s-12">Prénom, nom <?= ! $nom_valide ? '<span class="invalid">*</span>' : '' ?></label>
-            <input type="text" name="nom" id="nom" placeholder="prénom et nom" value="<?= $nom ?>" class="col-9 col-m-8 col-s-12" />
+            <label for="nom" class="col-4 col-m-4 col-s-12">Prénom, nom <?= ! $nom_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="text" name="nom" id="nom" placeholder="prénom et nom" value="<?= $nom ?>" class="col-8 col-m-8 col-s-12" />
             <?php if(! $nom_valide) { ?>
                 <p class="col-3"></p>
                 <p class="col-9">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
@@ -224,8 +224,8 @@ require_once 'views/header.php';
         </div>
         <!-- champ téléphone -->
         <div class="row">
-            <label for="telephone" class="col-3 col-m-4 col-s-12">Téléphone <?= ! $telephone_valide ? '<span class="invalid">*</span>' : '' ?></label>
-            <input type="tel" name="telephone" id="telephone" value="<?= $telephone ?>" class="col-9 col-m-8 col-s-12" />
+            <label for="telephone" class="col-4 col-m-4 col-s-12">Téléphone <?= ! $telephone_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="tel" name="telephone" id="telephone" value="<?= $telephone ?>" class="col-8 col-m-8 col-s-12" />
             <?php if(! $telephone_valide) { ?>
                 <p class="col-3"></p>
                 <p class="col-9">Téléphone au format 06 12 34 56 78 ou +336 12 34 56 78</p> <!-- message d'erreur si champ incorrect -->
@@ -233,8 +233,8 @@ require_once 'views/header.php';
         </div>
         <!-- champ email -->
         <div class="row">
-            <label for="email" class="col-3 col-m-4 col-s-12">Email <?= ! $email_valide ? '<span class="invalid">*</span>' : '' ?></label>
-            <input type="email" name="email" id="email" value="<?= $email ?>" class="col-9 col-m-8 col-s-12" />
+            <label for="email" class="col-4 col-m-4 col-s-12">Email <?= ! $email_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="email" name="email" id="email" value="<?= $email ?>" class="col-8 col-m-8 col-s-12" />
             <?php if(! $email_valide) { ?>
                 <p class="col-3"></p>
                 <p class="col-9">Format de mail incorrect</p> <!-- message d'erreur si champ incorrect -->
@@ -242,8 +242,8 @@ require_once 'views/header.php';
         </div>
         <!-- champ date événement -->
         <div class="row">
-            <label for="date" class="col-3 col-m-4 col-s-12">Date de l'événement <?= ! $date_valide ? '<span class="invalid">*</span>' : '' ?></label>
-            <input type="text" name="date" id="date" class="col-9 col-m-8 col-s-12" placeholder="JJ/MM/AAAA" value="<?=$date?>" />
+            <label for="date" class="col-4 col-m-4 col-s-12">Date de l'événement <?= ! $date_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="text" name="date" id="date" class="col-8 col-m-8 col-s-12" placeholder="JJ/MM/AAAA" value="<?=$date?>" />
             <?php if(! $date_valide) { ?>
                 <p class="col-3"></p>
                 <p class="col-9">Merci de remplir le champs au format JJ/MM/AAAA</p> <!-- message d'erreur si champ vide -->
@@ -251,8 +251,8 @@ require_once 'views/header.php';
         </div>
         <!-- champ lieu événement -->
         <div class="row">
-            <label for="lieu" class="col-3 col-m-4 col-s-12">Lieu de l'événement <?= ! $lieu_valide ? '<span class="invalid">*</span>' : '' ?></label>
-            <input type="text" name="lieu" id="lieu" value="<?= $lieu ?>" class="col-9 col-m-8 col-s-12" />
+            <label for="lieu" class="col-4 col-m-4 col-s-12">Lieu de l'événement <?= ! $lieu_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <input type="text" name="lieu" id="lieu" value="<?= $lieu ?>" class="col-8 col-m-8 col-s-12" />
             <?php if(! $lieu_valide) { ?>
                 <p class="col-3"></p>
                 <p class="col-9">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
@@ -260,14 +260,14 @@ require_once 'views/header.php';
         </div>
         <!-- champ type d'événement -->
         <div class="row">
-            <label class="col-3 col-m-4 col-s-12">Type d'événement <?= ! $type_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <label class="col-4 col-m-4 col-s-12">Type d'événement <?= ! $type_valide ? '<span class="invalid">*</span>' : '' ?></label>
             <div class="col-2 col-m-2 col-s-6  type-check">
                 <input type="checkbox" name="type[]" id="mariage" value="mariage"
                     <?= array_key_exists('type', $_POST) && in_array('mariage', $_POST['type']) ? 'checked="checked"' : '' ?>
                 />
                 <label for="mariage">Mariage</label>
             </div>
-            <div class="col-7 col-m-2 col-s-6 type-check">
+            <div class="col-6 col-m-3 col-s-6 type-check">
                 <input type="checkbox" name="type[]" id="engagement" value="engagement"
                     <?= array_key_exists('type', $_POST) && in_array('engagement', $_POST['type']) ? 'checked="checked"' : '' ?>
                 />
@@ -280,7 +280,7 @@ require_once 'views/header.php';
         </div>
         <!-- champ budget -->
         <div class="row">
-            <label class="col-3 col-m-4 col-s-12">Votre budget photographe <?= ! $budget_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <label class="col-4 col-m-4 col-s-12">Votre budget photographe <?= ! $budget_valide ? '<span class="invalid">*</span>' : '' ?></label>
             <div class="col-2 col-m-2 col-s-4 type-radio">
                 <input type="radio" name="budget" id="1700" value="1700" <?php if($_POST['budget']=="1700") echo "checked";?> />
                 <label for="1700">< 1700€</label>
@@ -294,14 +294,14 @@ require_once 'views/header.php';
                 <label for="2200">> 2200€</label>
             </div>
             <?php if(! $budget_valide) { ?>
-                <p class="col-3"></p>
+                <p class="col-4"></p>
                 <p class="col-9">Merci de cocher 1 case</p> <!-- message d'erreur si case non cochée -->
             <?php } ?>
         </div>
         <!-- champ question comment m'avez-vous connu -->
         <div class="row">
-            <label for="reponse" class="col-3 col-m-4 col-s-12">Comment m'avez-vous connu ? <?= ! $reponse_valide ? '<span class="invalid">*</span>' : '' ?></label>
-            <select name="reponse" id="reponse" class="col-9 col-m-8 col-s-12">
+            <label for="reponse" class="col-4 col-m-6 col-s-12">Comment m'avez-vous connu ? <?= ! $reponse_valide ? '<span class="invalid">*</span>' : '' ?></label>
+            <select name="reponse" id="reponse" class="col-8 col-m-6 col-s-12">
                 <?php foreach ($choix_reponses as $rep) {
                     $option_value = strtolower(substr($rep, 0, 3));
                     ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Mer 01 Mars 2017 à 17:23
+-- Généré le :  Jeu 02 Mars 2017 à 22:01
 -- Version du serveur :  5.6.34
 -- Version de PHP :  7.1.0
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `album` (
   `id` int(11) NOT NULL,
   `nom_album` varchar(128) NOT NULL,
+  `nom_photo` varchar(128) NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -36,17 +37,14 @@ CREATE TABLE `album` (
 -- Contenu de la table `album`
 --
 
-INSERT INTO `album` (`id`, `nom_album`, `date`) VALUES
-(1, 'Aline & Charles', '2014-08-30'),
-(2, 'Anne-Sophie & Emmanuel', '2015-09-05'),
-(3, 'Clémence & Thomas', '2011-09-24'),
-(4, 'Fanny & Guillaume', '2016-09-24'),
-(5, 'Marie & Colin', '2016-08-20'),
-(6, 'Marine & Guillaume', '2015-06-06'),
-(7, 'Marine & Olivier', '2011-09-17'),
-(8, 'Olivia & Martin', '2015-09-12'),
-(9, 'Rebecca & Isaac', '2015-10-17'),
-(10, 'Sylvie & Franck', '2015-06-27');
+INSERT INTO `album` (`id`, `nom_album`, `nom_photo`, `date`) VALUES
+(1, 'Marine et Guillaume', 'couple_marine_guillaume.jpg', '2015-06-06'),
+(2, 'Anne-Sophie et Pierre-Emmanuel', 'couple_anneso_pierremanu.jpg', '2015-09-05'),
+(3, 'Olivia et Martin', 'couple_olivia_martin.jpg', '2015-09-12'),
+(4, 'Anne-Sophie et Guillaume', 'couple_anneso_guillaume.jpg', '2016-06-11'),
+(5, 'Marie et Colin', 'couple_marie_colin.jpg', '2016-08-20'),
+(6, 'Fanny et Guillaume', 'couple_fanny_guillaume.jpg', '2016-09-24'),
+(7, 'Elisabeth et Guillaume', 'couple_elisabeth_guillaume.jpg', '2016-10-22');
 
 -- --------------------------------------------------------
 

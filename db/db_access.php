@@ -23,13 +23,30 @@ if ($res && ($res->num_rows > 0)) {
 //var_dump($categories);
 
 
+function get_album() {
+    global $mysqli;
+    // Rédaction de la requete sur les photos
+    $query_str = "Select album.id, album.nom_album, album.date, album.nom_photo from album";
+
+    $res = $mysqli->query($query_str); // Exécution de la requête
+
+    // Chargement des données, ligne par ligne (boucle while)
+    $data = array();
+    if ($res && ($res->num_rows > 0)) {
+        while ($album = $res->fetch_assoc()) {
+            $data[$album['id']] = $album;
+        }
+    }
+    //var_dump($data);
+    return $data;
+}
+
 
 function get_photos_by_album($album_id) {
     global $mysqli;
     // Rédaction de la requete sur les photos
     $query_str = "Select photos.id, photos.nom_photo, photos.ordre, photos.date, album.nom_album, album.date from photos
     INNER JOIN album ON photos.album_id=album.id  where album.id = ".$album_id;
-    var_dump($query_str);
 
     $res = $mysqli->query($query_str); // Exécution de la requête
 

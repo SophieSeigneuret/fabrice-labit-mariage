@@ -325,28 +325,20 @@ nav > ul > li > a {
 /* MAIN PORTFOLIO */
 /****************************/
 
-/*#masonry_hybrid_demo3 .grid-item .grid-item-inner{*/
-    /*position: relative;*/
-    /*background: #ececec;*/
+/*.item img {*/
     /*width: 100%;*/
-    /*height: 100%; }*/
-
-/*.item {*/
-    /*width: 100%;*/
-    /*background-color: #34495E;*/
-    /*min-height: 100px;*/
     /*padding: 5px;*/
-    /*margin: 10px 0px;*/
-    /*box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 2px;*/
-    /*border-radius: 4px;*/
-    /*color:#fff;*/
 /*}*/
 
 
-.item img {
-    width: 100%;
-    padding: 5px;
-}
+
+
+
+
+
+
+
+
 
 
 /****************************/
@@ -539,6 +531,10 @@ nav > ul > li > a {
     margin-right: 5px;
 }
 
+#form-contact>div:nth-of-type(6)>div:last-of-type, #form-contact>div:nth-of-type(7)>div:nth-of-type(2) {
+    padding-left: 20px;
+}
+
 /* ligne budget photographe */
 #form-contact div:nth-of-type(7), #form-temoignage div:nth-of-type(4) {
     margin: 45px 0;
@@ -569,7 +565,7 @@ nav > ul > li > a {
     width: 300px;
     border: none;
     text-transform: uppercase;
-    margin-top: 80px;
+    /*margin-top: 80px;*/
 }
 
 #form-contact input:focus, #form-contact select:focus, #form-contact textarea:focus, #laisser-temoignage input:focus, #laisser-temoignage textarea:focus {
@@ -747,6 +743,9 @@ footer #img-footer p a {
         padding: 30px;
     }
 
+    #form-contact>div:nth-of-type(6)>div:last-of-type, #form-contact>div:nth-of-type(7)>div:nth-of-type(2) {
+        padding-left: 7px;
+    }
 
 
 
@@ -859,6 +858,7 @@ footer #img-footer p a {
         height: 0;
         overflow: hidden;
         border: 1px solid #cacaca;
+        margin: 50px auto 60px;
     }
 
     nav a.mobile_menu {
@@ -921,7 +921,7 @@ footer #img-footer p a {
 
     /**** formulaire contact et laisser un temoignage ****/
     #contact, #laisser-temoignage {
-        padding: 30px;
+        padding: 0 30px;
     }
 
     #form-contact label, #form-temoignage label {
@@ -959,7 +959,7 @@ footer #img-footer p a {
 /*************************************************************************************************************************************/
 
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 550px) and (min-width: 320px) {
     .col-xs-1 {width: 8.33%;}
     .col-xs-2 {width: 16.66%;}
     .col-xs-3 {width: 25%;}

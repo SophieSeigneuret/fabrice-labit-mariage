@@ -17,6 +17,7 @@ $photos = get_photos_by_category(1);
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/gif" href="images/logo_icon.gif"/>
     <meta name="description"
@@ -35,19 +36,37 @@ require_once 'views/header.php';
 
 <main class="wrapper" id="mariage">
     <h2>Préparatifs</h2>
-    <div class="row" id="my-gallery-container">
+<!--    <div class="row" id="my-gallery-container">-->
+<!--        --><?php //foreach ($photos as $id => $photo) { ?>
+<!--            <div class="item col-4 col-m-6 col-s-12">-->
+<!--                <a href="#"><img src="--><?//= IMG_PATH, $photo['nom_photo'] ?><!--" alt="photo mariage"></a>-->
+<!--            </div>-->
+<!---->
+<!--        --><?php //} ?>
+<!--    </div>-->
 
-        <?php foreach ($photos as $id => $photo) { ?>
-            <div class="item col-4 col-m-6 col-s-12">
-                <a href="#"><img src="<?= IMG_PATH, $photo['nom_photo'] ?>" alt="photo mariage"></a>
-            </div>
-
-        <?php } ?>
+    <div class="content"  id="ajax-content">
+        <ul class="portfolio-grid">
+            <?php foreach ($photos as $id => $photo) { ?>
+                <li class="grid-item">
+                    <a href="<?= IMG_PATH, $photo['nom_photo'] ?>"><img src="<?= IMG_PATH, $photo['nom_photo'] ?>" alt="photo preparatif"></a>
+<!--                    <a class="ajax-link" href="index.php">-->
+<!--                        <div class="grid-hover">-->
+<!--                            <h1>Single</h1>-->
+<!--                            <p>Branding</p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+                </li>
+            <?php } ?>
+        </ul>
     </div>
+
 </main>
 
 <?php
 require_once 'views/footer.php';
+require_once 'views/scripts_portfolio.php';
 ?>
+
 </body>
 </html>
