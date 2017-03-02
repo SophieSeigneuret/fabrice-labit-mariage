@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!--    <link rel="stylesheet" href="css/jquery.bxslider.css"  />-->
+<!--    <link rel="stylesheet" type="text/css" href="css/demo.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/gif" href="images/logo_icon.gif"/>
@@ -29,12 +32,35 @@ require_once 'views/header.php';
 
 <main class="wrapper" id="accueil">
     <section id="carousel">
-        <img src="images/carousel/img-carousel-mariage-1.jpg" alt="image mariage 1 du carousel"/>
+        <!-- slider -->
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="images/carousel/img-carousel-mariage-1.jpg" alt="image mariage 1 du carousel" />
+                </li>
+                <li>
+                    <img src="images/carousel/img-carousel-mariage-2.jpg" alt="image mariage 2 du carousel" />
+                </li>
+                <li>
+                    <img src="images/carousel/img-carousel-mariage-3.jpg" alt="image mariage 3 du carousel" />
+                </li>
+                <li>
+                    <img src="images/carousel/img-carousel-mariage-4.jpg" alt="image mariage 4 du carousel" />
+                </li>
+                <li>
+                    <img src="images/carousel/img-carousel-mariage-5.jpg" alt="image mariage 5 du carousel" />
+                </li>
+            </ul>
+        </div>
+
+        <!-- citation -->
         <div>
             <h4>"Le mariage c’est la volonté à deux de créer l’unique"</h4>
-            <h5>- Friedrich Neitzsche -</h5>
+            <h5>- Friedrich Nietzsche -</h5>
         </div>
     </section>
+
+    <!-- a propos du photographe -->
     <aside class="row">
         <div>
             <img src="images/fabrice-labit.jpg" alt="photo de profil de Fabrice Labit" class="col-2 col-s-3 col-xs-12">

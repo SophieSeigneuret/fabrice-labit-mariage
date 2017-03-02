@@ -29,5 +29,20 @@ $(document).ready(function () {
 });
 
 
-/* PORTFOLIO */
+/* CAROUSEL BXSLIDER */
+//$(document).ready(function(){
+//    $('.bxslider').bxSlider({
+//        auto: true,
+//        autoControls: true
+//    });
+//});
 
+
+/* CAROUSEL */
+$(document).ready(function() {
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
+    });
+});

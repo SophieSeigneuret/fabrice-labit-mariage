@@ -244,6 +244,7 @@ nav > ul > li > a {
     width: 800px;
     padding: 20px;
     border: 1px solid #cacaca;
+    margin: 0 auto;
 }
 
 /* citation */
@@ -305,6 +306,15 @@ nav > ul > li > a {
 
 #accueil aside div a:hover {
     color: #6c6c6c;
+}
+
+
+
+
+
+/* carousel */
+.flex-direction-nav {
+    display: none;
 }
 
 
@@ -700,21 +710,25 @@ footer #img-footer p a {
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
 
+
+    /**** global ****/
     .wrapper {
         width: 100%;
         margin: 0 auto;
     }
 
+    .img-bouquets img {
+        width: 20%;
+    }
+
+
+    /**** carousel ****/
     #accueil section img {
         width: 100%;
     }
 
-    #accueil section div {
-        padding: 0 20px;
-    }
-
-    .img-bouquets img {
-        width: 20%;
+    #accueil section {
+        padding: 0 30px;
     }
 
 
@@ -818,8 +832,14 @@ footer #img-footer p a {
     #social-link-header a:nth-of-type(3) {
         padding-left: 50px;
     }
-    
-    
+
+
+    /**** carousel ****/
+    #accueil section {
+        padding: 0 20px;
+    }
+
+
     /**** aside photographe ****/
     #accueil aside img {
         padding-left: 20px;
@@ -953,6 +973,11 @@ footer #img-footer p a {
     .col-xs-11 {width: 91.66%;}
     .col-xs-12 {width: 100%;}
 
+
+    /**** carousel ****/
+    #accueil section {
+        padding: 0;
+    }
 
 
     /* footer */
