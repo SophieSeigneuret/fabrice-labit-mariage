@@ -1,5 +1,7 @@
 <?php
 require_once 'defines.php';
+require_once 'envoi_mail.php';
+require_once 'traitement_donnees.php';
 //phpinfo();
 
 $choix_reponses = array ('Votre choix', 'Internet', 'Recommandation', 'Bouche à oreille');
@@ -94,74 +96,16 @@ if (array_key_exists('message', $_POST)) {
     $message_valide = (1 === preg_match('/[A-Za-z]\w{0,}/', $message));
 }
 
-function envoi_mail() {
-    $passage_ligne = "\r\n";
 
-    $mail = 'frederic.minatchy@gmail.com'; // Déclaration de l'adresse de destination.
-
-//=====Déclaration des messages au format texte et au format HTML.
-    $message_txt = "Salut à tous, voici un e-mail envoyé par un script PHP.";
-    $message_html = "<html><head></head><body><b>Salut à tous</b>, voici un e-mail envoyé par un <i>script PHP</i>.</body></html>";
-//==========
-
-//=====Création de la boundary.
-    $boundary = "-----=".md5(rand());
-    $boundary_alt = "-----=".md5(rand());
-//==========
-
-//=====Définition du sujet.
-    $sujet = "Hey mon ami !!!!!!!!";
-//=========
-
-//=====Création du header de l'e-mail.
-    $header = "From: \"Frederic Minatchy\"<frederic.minatchy@gmail.com>".$passage_ligne;
-    $header.= "Reply-to: \"Frederic Minatchy\" <frederic.minatchy@gmail.com>".$passage_ligne;
-    $header.= "MIME-Version: 1.0".$passage_ligne;
-    $header.= "Content-Type: multipart/mixed;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
-//==========
-
-//=====Création du message.
-    $message = $passage_ligne."--".$boundary.$passage_ligne;
-    $message.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary_alt\"".$passage_ligne;
-    $message.= $passage_ligne."--".$boundary_alt.$passage_ligne;
-//=====Ajout du message au format texte.
-    $message.= "Content-Type: text/plain; charset=\"ISO-8859-1\"".$passage_ligne;
-    $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
-    $message.= $passage_ligne.$message_txt.$passage_ligne;
-//==========
-
-    $message.= $passage_ligne."--".$boundary_alt.$passage_ligne;
-
-//=====Ajout du message au format HTML.
-    $message.= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
-    $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
-    $message.= $passage_ligne.$message_html.$passage_ligne;
-//==========
-
-//=====On ferme la boundary alternative.
-    $message.= $passage_ligne."--".$boundary_alt."--".$passage_ligne;
-//==========
-
-
-
-    $message.= $passage_ligne."--".$boundary.$passage_ligne;
-
-//=====Envoi de l'e-mail.
-    if(mail($mail,$sujet,$message,$header))
-    {
-        echo "Mail envoyé";
-    }else {
-        echo "boulette";
-    }
-
-}
 
 
 if ($en_reception && $nom_valide && $telephone_valide && $email_valide && $date_valide
     && $lieu_valide && $type_valide && $budget_valide && $reponse_valide && $message_valide) {
     // les données de formulaire sont valides
 //    header('location:contact.php');
-    envoi_mail();
+    var_dump($email);
+    var_dump($message);
+    envoi_mail($email, infos_mail_contact($nom, $telephone, $email, $date, $lieu, $type, $budget, $reponse, $message));
     //exit;
 }
 

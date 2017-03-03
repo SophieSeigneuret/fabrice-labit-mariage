@@ -9,6 +9,8 @@ $photos = get_photos_by_category(2);
 $album = get_album();
 // var_dump($album);
 
+$album_mariage = get_album_by_category(2);
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +22,7 @@ $album = get_album();
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/porfolio.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/gif" href="images/logo_icon.gif"/>
     <meta name="description"
@@ -51,13 +53,13 @@ require_once 'views/header.php';
 
     <div class="content"  id="ajax-content">
         <ul class="portfolio-grid">
-            <?php foreach ($album as $id => $photo) { ?>
+            <?php foreach ($album_mariage as $id => $album) { ?>
                 <li class="grid-item">
-                    <img src="<?= IMG_PATH, $photo['nom_photo'] ?>" alt="photo couple">
+                    <img src="<?= IMG_PATH, $album['nom_photo'] ?>" alt="photo couple">
                     <a class="ajax-link" href="index.php">
                         <div class="grid-hover">
-                            <h1><?= $photo['nom_album'] ?></h1>
-                            <p><?= $photo['date'] ?></p>
+                            <h1><?= $album['nom_album'] ?></h1>
+                            <p><?= $album['date'] ?></p>
                         </div>
                     </a>
                 </li>
@@ -68,7 +70,7 @@ require_once 'views/header.php';
 
 <?php
 require_once 'views/footer.php';
-require_once 'views/scripts_portfolio.php';
+require_once 'views/script_portfolio.php';
 ?>
 </body>
 </html>
