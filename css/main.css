@@ -216,7 +216,7 @@ nav > ul > li > a {
 }
 
 /* titres */
-#apropos h2, #faq h2, #temoignages h2, #laisser-temoignage h2, #mariage h2 {
+#apropos h2, #faq h2, #temoignages h2, #laisser-temoignage h2, #preparatifs h2, #mariage h2, #engagement h2 {
     text-align: center;
     font-size: 1rem;
     font-weight: 300;
@@ -588,7 +588,7 @@ nav > ul > li > a {
     /*margin-top: 80px;*/
 }
 
-#form-contact input:focus, #form-contact select:focus, #form-contact textarea:focus, #laisser-temoignage input:focus, #laisser-temoignage textarea:focus {
+#form-contact input:focus, #form-contact select:focus, #form-contact textarea:focus, #laisser-temoignage input:focus, #laisser-temoignage textarea:focus, img, a {
     outline: none;
 }
 

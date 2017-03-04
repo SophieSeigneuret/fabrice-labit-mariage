@@ -18,15 +18,15 @@ function infos_mail_contact($nom, $tel, $mail, $date, $lieu, $type, $budget, $re
     $msg.= "Lieu de l'événement : ".$lieu."\n";
 
 
-
+    $temp = '';
     foreach ($type as $typ) {
-        $msg.= "Type d'événement : ".$typ."\n";
-        echo $msg;
+        $temp .= $typ . ' ';
     }
 
 
 
 //    $msg.= "Type d'événement : ".$type."\n";
+    $msg.= "Type d'événement : ".$temp."\n";
     $msg.= "Budget prévu : ".$budget." €\n";
     $msg.= "Vous m'avez connu par : ".$reponse."\n";
     $msg.= "Votre message : ".$message;

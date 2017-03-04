@@ -14,11 +14,11 @@
         <a class="mobile_menu" title="Menu" href="#">Menu</a>
         <ul id="menu">
             <li><a href="index.php">ACCUEIL</a></li>
-            <li><a href="#">PORTFOLIO</a>
+            <li><a href="portfolio.php?mariage">PORTFOLIO</a>
                 <ul>
-                    <li><a href="preparatifs.php">Préparatifs</a></li>
-                    <li><a href="mariage.php">Mariage</a></li>
-                    <li><a href="engagement.php">Engagement</a></li>
+                    <li><a href="portfolio.php?preparatifs">Préparatifs</a></li>
+                    <li><a href="portfolio.php?mariage">Mariage</a></li>
+                    <li><a href="portfolio.php?engagement">Engagement</a></li>
                 </ul>
             </li>
             <li><a href="apropos.php">A PROPOS</a>
@@ -30,7 +30,7 @@
             <li><a href="temoignages.php">TEMOIGNAGES</a>
                 <ul>
                     <li><a href="temoignages.php">Ils m'ont fait confiance</a></li>
-                    <li><a href="laisser-temoignage.php">Laissez un témoignage</a></li>
+                    <li><a href="laisser_temoignage.php">Laissez un témoignage</a></li>
                 </ul>
             </li>
             <li><a href="contact.php">CONTACT</a></li>

@@ -105,7 +105,8 @@ if ($en_reception && $nom_valide && $telephone_valide && $email_valide && $date_
 //    header('location:contact.php');
     var_dump($email);
     var_dump($message);
-    envoi_mail($email, infos_mail_contact($nom, $telephone, $email, $date, $lieu, $type, $budget, $reponse, $message));
+    $info_mail_contact = infos_mail_contact($nom, $telephone, $email, $date, $lieu, $type, $budget, $reponse, $message);
+    envoi_mail($email, utf8_encode($info_mail_contact));
     //exit;
 }
 
