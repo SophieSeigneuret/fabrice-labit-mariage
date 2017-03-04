@@ -1,4 +1,5 @@
 <?php
+$page_title = 'Contact';
 require_once 'defines.php';
 require_once 'envoi_mail.php';
 require_once 'traitement_donnees.php';

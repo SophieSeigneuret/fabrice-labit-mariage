@@ -1,5 +1,5 @@
 <?php
-
+$page_title = 'A propos';
 ?>
 
 <!DOCTYPE html>

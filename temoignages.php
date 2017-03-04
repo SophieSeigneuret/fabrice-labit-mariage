@@ -1,5 +1,5 @@
 <?php
-
+$page_title = 'Témoignages';
 ?>
 
 <!DOCTYPE html>

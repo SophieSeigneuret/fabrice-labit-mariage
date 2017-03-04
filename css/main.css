@@ -228,6 +228,9 @@ nav > ul > li > a {
     margin-bottom: 60px;
 }
 
+.active {
+    color: #6c6c6c;
+}
 
 
 

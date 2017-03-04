@@ -13,27 +13,27 @@
     <nav>
         <a class="mobile_menu" title="Menu" href="#">Menu</a>
         <ul id="menu">
-            <li><a href="index.php">ACCUEIL</a></li>
-            <li><a href="portfolio.php?mariage">PORTFOLIO</a>
+            <li><a href="index.php" class="<?php if ($page_title == 'Accueil') { echo 'active'; } ?>">ACCUEIL</a></li>
+            <li><a href="portfolio.php?mariage" class="<?php if ($page_title == 'Portfolio') { echo 'active'; } ?>">PORTFOLIO</a>
                 <ul>
-                    <li><a href="portfolio.php?preparatifs">Préparatifs</a></li>
-                    <li><a href="portfolio.php?mariage">Mariage</a></li>
-                    <li><a href="portfolio.php?engagement">Engagement</a></li>
+                    <li><a href="portfolio.php?preparatifs" class="<?php if (array_key_exists(PREPARATIFS, $_GET)) {echo 'active';} ?>">Préparatifs</a></li>
+                    <li><a href="portfolio.php?mariage" class="<?php if (array_key_exists(MARIAGE, $_GET)) {echo 'active';} ?>">Mariage</a></li>
+                    <li><a href="portfolio.php?engagement" class="<?php if (array_key_exists(ENGAGEMENT, $_GET)) {echo 'active';} ?>">Engagement</a></li>
                 </ul>
             </li>
-            <li><a href="apropos.php">A PROPOS</a>
+            <li><a href="apropos.php" class="<?php if (($page_title == 'A propos') || ($page_title == 'faq')) { echo 'active'; } ?>">A PROPOS</a>
                 <ul>
-                    <li><a href="apropos.php">A propos de moi</a></li>
-                    <li><a href="faq.php">FAQ</a></li>
+                    <li><a href="apropos.php" class="<?php if ($page_title == 'A propos') { echo 'active'; } ?>">A propos de moi</a></li>
+                    <li><a href="faq.php" class="<?php if ($page_title == 'faq') { echo 'active'; } ?>">FAQ</a></li>
                 </ul>
             </li>
-            <li><a href="temoignages.php">TEMOIGNAGES</a>
+            <li><a href="temoignages.php" class="<?php if (($page_title == 'Témoignages') || ($page_title == 'Laissez un témoignage')) { echo 'active'; } ?>">TEMOIGNAGES</a>
                 <ul>
-                    <li><a href="temoignages.php">Ils m'ont fait confiance</a></li>
-                    <li><a href="laisser_temoignage.php">Laissez un témoignage</a></li>
+                    <li><a href="temoignages.php" class="<?php if ($page_title == 'Témoignages') { echo 'active'; } ?>">Ils m'ont fait confiance</a></li>
+                    <li><a href="laisser_temoignage.php" class="<?php if ($page_title == 'Laissez un témoignage') { echo 'active'; } ?>">Laissez un témoignage</a></li>
                 </ul>
             </li>
-            <li><a href="contact.php">CONTACT</a></li>
+            <li><a href="contact.php" class="<?php if ($page_title == 'Contact') { echo 'active'; } ?>">CONTACT</a></li>
         </ul>
     </nav>
 </header>

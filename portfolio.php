@@ -1,4 +1,5 @@
 <?php
+$page_title = 'Portfolio';
 require_once 'defines.php';
 require_once 'db/db_access.php';
 

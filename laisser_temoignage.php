@@ -1,4 +1,6 @@
 <?php
+$page_title = 'Laissez un témoignage';
+
 // Affichage initial du formulaire ? ou bien réception des données ?
 $en_reception = array_key_exists('nom', $_POST);
 

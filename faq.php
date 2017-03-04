@@ -1,5 +1,5 @@
 <?php
-
+$page_title = 'faq';
 ?>
 
 <!DOCTYPE html>
