@@ -29,9 +29,10 @@ require_once 'views/header.php';
 
 <main class="wrapper" id="apropos">
     <h2>A propos de moi</h2>
-    <div class="row">
-        <img src="images/photo-fabrice-labit-big.jpg" alt="photo Fabrice Labit" class="col-4">
-        <div class="col-8">
+    <div>
+        <img src="images/photo-fabrice-labit-big-v.jpg" alt="photo Fabrice Labit">
+        <img src="images/photo-fabrice-labit-big-h.jpg" alt="photo Fabrice Labit">
+        <div>
             <p>Il est très important pour ce jour unique d'avoir l'assurance de faire appel à un photographe professionnel
                 pour que votre journée soit capturée dans les meilleures conditions quelles que soient les circonstances. En
                 observateur discret, je couvre les mariages en mode photoreportage. </p>

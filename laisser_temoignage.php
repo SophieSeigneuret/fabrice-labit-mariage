@@ -87,14 +87,14 @@ require_once 'views/header.php';
 
     <div>
         <p>Je vous serais très reconnaissant de me laisser un témoignage de sympathie et dire si vous avez apprécié mon travail.</p>
-        <form action="laisser-temoignage.php" id="form-temoignage" method="post">
+        <form action="laisser_temoignage.php" id="form-temoignage" method="post">
             <!-- champ nom -->
             <div class="row">
                 <label for="nom" class="col-3 col-m-4 col-s-12">Prénoms du couple <?= ! $nom_valide ? '<span class="invalid">*</span>' : '' ?></label>
-                <input type="text" name="nom" id="nom" class="col-9 col-m-8 col-s-12" value="<?= $nom ?>" placeholder="exemple : Camille & Fabrice" />
+                <input type="text" name="nom" id="nom" class="col-9 col-m-8 col-s-12" value="<?= $nom ?>" placeholder="ex : Camille & Fabrice" />
                 <?php if(! $nom_valide) { ?>
-                    <p class="col-3"></p>
-                    <p class="col-9">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
+                    <p class="col-3 col-m-4 col-s-12"></p>
+                    <p class="col-9 col-m-8 col-s-12">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
                 <?php } ?>
             </div>
             <!-- champ email -->
@@ -102,28 +102,28 @@ require_once 'views/header.php';
                 <label for="email" class="col-3 col-m-4 col-s-12">Email <?= ! $email_valide ? '<span class="invalid">*</span>' : '' ?></label>
                 <input type="email" name="email" id="email" class="col-9 col-m-8 col-s-12" value="<?= $email ?>" />
                 <?php if(! $email_valide) { ?>
-                    <p class="col-3"></p>
-                    <p class="col-9">Format de mail incorrect</p> <!-- message d'erreur si champ incorrect -->
+                    <p class="col-3 col-m-4 col-s-12"></p>
+                    <p class="col-9 col-m-8 col-s-12">Format de mail incorrect</p> <!-- message d'erreur si champ incorrect -->
                 <?php } ?>
             </div>
             <!-- champ type d'événement -->
             <div class="row">
                 <label class="col-3 col-m-4 col-s-12">Type d'événement <?= ! $type_valide ? '<span class="invalid">*</span>' : '' ?></label>
-                <div class="col-2 col-m-3 col-s-6 type-check">
+                <div class="col-2 col-m-3 col-s-6 col-xs-12 type-check">
                     <input type="checkbox" name="type[]" id="mariage" value="mariage"
                         <?= array_key_exists('type', $_POST) && in_array('mariage', $_POST['type']) ? 'checked="checked"' : '' ?>
                     />
                     <label for="mariage">Mariage</label>
                 </div>
-                <div class="col-2 col-m-4 col-s-6 type-check">
+                <div class="col-7 col-m-4 col-s-6 col-xs-12 type-check">
                     <input type="checkbox" name="type[]" id="engagement" value="engagement"
                         <?= array_key_exists('type', $_POST) && in_array('engagement', $_POST['type']) ? 'checked="checked"' : '' ?>
                     />
                     <label for="engagement">Engagement</label>
                 </div>
                 <?php if(! $type_valide) { ?>
-                    <p class="col-3"></p>
-                    <p class="col-9">Cochez au moins 1 case</p> <!-- message d'erreur si case non cochée -->
+                    <p class="col-3 col-m-4 col-s-12"></p>
+                    <p class="col-9 col-m-8 col-s-12">Merci de cocher au moins 1 case</p> <!-- message d'erreur si case non cochée -->
                 <?php } ?>
             </div>
             <!-- champ lieu événement -->
@@ -131,8 +131,8 @@ require_once 'views/header.php';
                 <label for="lieu" class="col-3 col-m-4 col-s-12">Lieu de l'événement <?= ! $lieu_valide ? '<span class="invalid">*</span>' : '' ?></label>
                 <input type="text" name="lieu" id="lieu" class="col-9 col-m-8 col-s-12" value="<?= $lieu ?>" />
                 <?php if(! $lieu_valide) { ?>
-                    <p class="col-3"></p>
-                    <p class="col-9">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
+                    <p class="col-3 col-m-4 col-s-12"></p>
+                    <p class="col-9 col-m-8 col-s-12">Merci de remplir le champs</p> <!-- message d'erreur si champ vide -->
                 <?php } ?>
             </div>
             <!-- champ message -->

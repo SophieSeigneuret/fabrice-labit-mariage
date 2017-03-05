@@ -1,5 +1,5 @@
 <?php
-require_once 'define_sentora.php';
+require_once 'define_local.php';
 
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 if ($mysqli->connect_errno) {

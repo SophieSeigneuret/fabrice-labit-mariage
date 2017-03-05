@@ -31,16 +31,16 @@ require_once 'views/header.php';
     <h2>Ils m’ont fait confiance</h2>
 
     <div>
-        <img src="images/photo-mariage-marine-guillaume.jpg" alt="photo mariage Marine et Guillaume" ><!--
+        <img src="images/photo-mariage-marine-guillaume.jpg" alt="photo mariage Marine et Guillaume"><!--
      --><div>
             <h3>Marine & Guillaume - Mariage à paris</h3>
-            <p>« Fabrice a fait un travail fantastique, aussi bien pour notre session engagement que pour le jour J. Les
-                photos sont vraiment belles et transcrivent parfaitement l’atmosphere de la journee. Nous avons beaucoup
-                de mal a choisir celles que nous allons encadrer. Il y en a tant!
-                En plus d’etre un vraie pro, Fabrice est vraiment sympathique et discret. Nous avons beaucoup apprecié
+            <p>Fabrice a fait un travail fantastique, aussi bien pour notre session engagement que pour le jour J. Les
+                photos sont vraiment belles et transcrivent parfaitement l’atmosphère de la journée. Nous avons beaucoup
+                de mal à choisir celles que nous allons encadrer. Il y en a tant!
+                En plus d’etre un vrai pro, Fabrice est vraiment sympathique et discret. Nous avons beaucoup apprecié
                 sa presence le jour J et vu le resultat de la e-session, nous savions que nous pouvions lui faire
-                confiance les yeux fermes.
-                Si vous hesitez encore sur le choix de votre photographe, n’hesitez plus, vous l’avez trouvé! »</p>
+                confiance les yeux fermés.
+                Si vous hesitez encore sur le choix de votre photographe, n’hésitez plus, vous l’avez trouvé!</p>
         </div>
     </div>
 
@@ -48,13 +48,13 @@ require_once 'views/header.php';
         <img src="images/photo-mariage-rebecca-isaac.jpg" alt="photo mariage Rebecca et Isaac" ><!--
      --><div>
             <h3>Rebecca & Isaac - Mariage à paris</h3>
-            <p>« Fabrice nous a offert le plus beau des cadeaux de mariage en acceptant de traverser la campagne Picarde
-                sous la grisaille pour venir couvrir notre mariage dans le petit village de Francieres en Aout dernier.
-                Annie est une artiste tres talentueuse, une photographe discrete, et passionnee, une personne genereuse
+            <p>Fabrice nous a offert le plus beau des cadeaux de mariage en acceptant de traverser la campagne Picarde
+                sous la grisaille pour venir couvrir notre mariage dans le petit village de Francières en Août dernier.
+                Fabrice est un artiste très talentueux, un photographe discret et passionné, une personne généreuse
                 et pleine de douceur.
-                Annie, c’etait tellement agreable de t’avoir a nos cotes et partager a travers tes yeux cette belle
-                journee.
-                Merci infiniment pour tous les beaux souvenirs que tu nous a crees. »</p>
+                Fabrice, c’etait tellement agréable de t’avoir à nos côtés et partager à travers tes yeux cette belle
+                journée.
+                Merci infiniment pour tous les beaux souvenirs que tu nous as créés.</p>
         </div>
     </div>
 
@@ -62,11 +62,11 @@ require_once 'views/header.php';
         <img src="images/photo-engagement-sylvie-franck.jpg" alt="photo engagement Sylvie et Franck" ><!--
      --><div>
             <h3>Sylvie & Franck - Séance engagement à Versailles</h3>
-            <p>« Merci pour les photos, nous sommes très contents du rendu des photos ! Sur certaines photos on se
+            <p>Merci pour les photos, nous sommes très contents du rendu des photos ! Sur certaines photos on se
                 trouve même beau ;) et surtout tu as réussi à capter notre naturel et notre complicité ! Nous, c’est ce
                 qu’on ressent quand on regarde les photos. On s’est dit souvent: “là je te reconnais” ou “on a l’air
                 complices”. Nous avons hâte de faire les prochaines séances sous la neige puis quand il fera bon. On
-                t’embrasse ! »</p>
+                t’embrasse !</p>
         </div>
     </div>
 </main>
