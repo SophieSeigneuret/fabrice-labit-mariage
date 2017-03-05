@@ -31,8 +31,8 @@ require_once 'db/db_access.php';
     <link rel="icon" type="image/gif" href="images/logo_icon.gif"/>
     <!-- description -->
     <?php if (array_key_exists(PREPARATIFS, $_GET)) { ?>
-    <meta name="description"
-          content="Fabrice Labit est présent dès les préparatifs de mariage qui font partie intégrante de cette journée : maquillage, habillage, ou encore décoration."/>
+        <meta name="description"
+              content="Fabrice Labit est présent dès les préparatifs de mariage qui font partie intégrante de cette journée : maquillage, habillage, ou encore décoration."/>
     <?php } ?>
     <?php if (array_key_exists(MARIAGE, $_GET)) { ?>
         <meta name="description"
@@ -54,39 +54,62 @@ require_once 'db/db_access.php';
 require_once 'views/header.php';
 ?>
 
-<!-- sélection de la page préparatifs -->
-<?php if (array_key_exists(PREPARATIFS, $_GET)) {
-    $photos = get_photos_by_category(1);
+<!-- sélection de la page préparatifs ou engagement -->
+<?php
+$is_mariage = array_key_exists(MARIAGE, $_GET);
+if (!$is_mariage) {
+    if (array_key_exists(PREPARATIFS, $_GET)) {
+        $photos = get_photos_by_category(1);
+        $titre = 'Préparatifs';
+        $id_main = 'preparatifs';
+    } else if (array_key_exists(ENGAGEMENT, $_GET)) {
+        $photos = get_photos_by_category(3);
+        $titre = 'Engagement';
+        $id_main = 'engagement';
+    } else  {
+        $photos = get_photos_mariage_by_album($_GET['id']);
+        $titre = 'Mariage';
+        $id_main = 'mariage_detail';
+    }
     ?>
-    <main class="wrapper" id="preparatifs">
-        <h2>Préparatifs</h2>
-
-        <div class="content" id="ajax-content">
+    <main class="wrapper" id="<?= $id_main ?>">
+        <h2><?= $titre ?></h2>
+        <?php if (array_key_exists('mariage_detail', $_GET)) {
+            //var_dump($photos[0]['nom_album']);?>
+            <h3><?= $photos[0]['nom_album'] ?></h3>
+            <a href="portfolio.php?mariage">retour</a>
+        <?php }  ?>
+        <div class="content ajax-content">
             <ul class="portfolio-grid">
                 <?php foreach ($photos as $id => $photo) { ?>
                     <li class="grid-item">
                         <a href="<?= IMG_PATH, $photo['nom_photo'] ?>" data-fancybox="gallery">
-                            <img src="<?= IMG_PATH, $photo['nom_photo'] ?>" alt="photo preparatif">
+                            <img src="<?= IMG_PATH, $photo['nom_photo'] ?>"
+                                 alt="photo <?= $photo['nom_photo'] ?>">
                         </a>
                     </li>
                 <?php } ?>
             </ul>
         </div>
+        <?php if (array_key_exists('mariage_detail', $_GET)) {
+            //var_dump($photos[0]['nom_album']);?>
+            <a href="portfolio.php?mariage">retour</a>
+        <?php }  ?>
     </main>
-<?php } ?>
+<?php } else {
 
-<!-- sélection de la page mariage -->
-<?php if (array_key_exists(MARIAGE, $_GET)) {
+
+// sélection de la page mariage
     $album_mariage = get_album_by_category(2);
     ?>
     <main class="wrapper" id="mariage">
         <h2>Mariage</h2>
-        <div class="content"  id="ajax-content">
+        <div class="content ajax-content">
             <ul class="portfolio-grid">
                 <?php foreach ($album_mariage as $id => $album) { ?>
                     <li class="grid-item">
                         <img src="<?= IMG_PATH, $album['nom_photo'] ?>" alt="photo couple">
-                        <a class="ajax-link" href="index.php">
+                        <a href="portfolio.php?mariage_detail&id=<?= $album['id'] ?>">
                             <div class="grid-hover">
                                 <h1><?= $album['nom_album'] ?></h1>
                                 <p><?= $album['date'] ?></p>
@@ -96,29 +119,27 @@ require_once 'views/header.php';
                 <?php } ?>
             </ul>
         </div>
-    </main>
-    <?php } ?>
 
-<!-- sélection de la page engagement -->
-<?php if (array_key_exists(ENGAGEMENT, $_GET)) {
-    $photos = get_photos_by_category(3);
-    ?>
-    <main class="wrapper" id="engagement">
-        <h2>Engagement</h2>
+<!--        --><?php //$photo_mariage = get_photos_mariage_by_album(2);
+//        ?>
+<!--        <div class="content ajax-content" id="mariage">-->
+<!--            <ul class="portfolio-grid">-->
+<!--                --><?php //foreach ($photo_mariage as $id => $photo) { ?>
+<!--                    <li class="grid-item">-->
+<!--                        <a href="--><?//= IMG_PATH, $photo['nom_photo'] ?><!--" data-fancybox="gallery">-->
+<!--                            <img src="--><?//= IMG_PATH, $photo['nom_photo'] ?><!--" alt="photo mariage">-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                --><?php //} ?>
+<!--            </ul>-->
+<!--        </div>-->
 
-        <div class="content" id="ajax-content">
-            <ul class="portfolio-grid">
-                <?php foreach ($photos as $id => $photo) { ?>
-                    <li class="grid-item">
-                        <a href="<?= IMG_PATH, $photo['nom_photo'] ?>" data-fancybox="gallery">
-                            <img src="<?= IMG_PATH, $photo['nom_photo'] ?>" alt="photo preparatif">
-                        </a>
-                    </li>
-                <?php } ?>
-            </ul>
-        </div>
     </main>
+
 <?php } ?>
+
+
+
 
 
 

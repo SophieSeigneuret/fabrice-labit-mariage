@@ -228,6 +228,18 @@ nav > ul > li > a {
     margin-bottom: 60px;
 }
 
+#mariage_detail h2 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #6c6c6c;
+    text-transform: uppercase;
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
 .active {
     color: #6c6c6c;
 }
@@ -320,9 +332,9 @@ nav > ul > li > a {
     display: none;
 }
 
-.flex-control-nav {
-    display: none;
-}
+/*.flex-control-nav {*/
+    /*display: none;*/
+/*}*/
 
 
 
@@ -331,31 +343,31 @@ nav > ul > li > a {
 /* MAIN PORTFOLIO */
 /****************************/
 
-/*.item img {*/
-    /*width: 100%;*/
-    /*padding: 5px;*/
-/*}*/
-
-
-.my-gallery {
-    width: 100%;
-    float: left;
+#mariage_detail>h3, #mariage_detail>a {
+    text-align: center;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    font-size: 1rem;
 }
-.my-gallery img {
-    width: 100%;
-    height: auto;
+
+#mariage_detail>h3 {
+    color: #6a6a6a;
+    margin-bottom: 20px;
+    font-style: italic;
 }
-.my-gallery figure {
+
+#mariage_detail>a {
     display: block;
-    float: left;
-    margin: 0 5px 5px 0;
-    width: 150px;
+    color: #fff;
+    background-color: #cacaca;
+    width: 100px;
+    margin: 0 auto;
+    line-height: 28px;
+    height: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
-.my-gallery figcaption {
-    display: none;
-}
-
-
 
 
 

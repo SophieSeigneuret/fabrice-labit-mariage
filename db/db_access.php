@@ -42,19 +42,20 @@ function get_album() {
 }
 
 
-function get_photos_by_album($album_id) {
+function get_photos_mariage_by_album($album_id) {
     global $mysqli;
     // Rédaction de la requete sur les photos
-    $query_str = "Select photos.id, photos.nom_photo, photos.ordre, photos.date, photos.format, album.nom_album, album.date from photos
-    INNER JOIN album ON photos.album_id=album.id  where album.id = ".$album_id;
+    $query_str = "Select photos.id, photos.nom_photo, photos.category_id, photos.album_id, photos.date, album.nom_album, album.date from photos INNER JOIN album on album.id=photos.album_id where photos.category_id = 2 and album_id = ".$album_id;
 
     $res = $mysqli->query($query_str); // Exécution de la requête
 
     // Chargement des données, ligne par ligne (boucle while)
     $data = array();
+    $i = 0;
     if ($res && ($res->num_rows > 0)) {
         while ($photos = $res->fetch_assoc()) {
-            $data[$photos['id']] = $photos;
+            $data[$i] = $photos;
+            $i++;
         }
     }
     //var_dump($data);
@@ -75,6 +76,7 @@ function get_photos_by_category($category_id) {
     if ($res && ($res->num_rows > 0)) {
         while ($photos = $res->fetch_assoc()) {
             $data[$photos['id']] = $photos;
+
         }
     }
     //var_dump($data);

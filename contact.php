@@ -229,7 +229,7 @@ require_once 'views/header.php';
             <label class="col-4 col-m-4 col-s-12">Votre budget photographe <?= ! $budget_valide ? '<span class="invalid">*</span>' : '' ?></label>
             <div class="col-2 col-m-2 col-s-4 type-radio">
                 <input type="radio" name="budget" id="1700" value="1700" <?php if($_POST['budget']=="1700") echo "checked";?> />
-                <label for="1700">< 1700€</label>
+                <label for="1700">&lt; 1700€</label>
             </div>
             <div class="col-3 col-m-3 col-s-4 type-radio">
                 <input type="radio" name="budget" id="2000" value="2000" <?php if($_POST['budget']=="2000") echo "checked";?> />
@@ -237,7 +237,7 @@ require_once 'views/header.php';
             </div>
             <div class="col-2 col-m-2 col-s-4 type-radio">
                 <input type="radio" name="budget" id="2200" value="2200" <?php if($_POST['budget']=="2200") echo "checked";?> />
-                <label for="2200">> 2200€</label>
+                <label for="2200">&gt; 2200€</label>
             </div>
             <?php if(! $budget_valide) { ?>
                 <p class="col-4"></p>
