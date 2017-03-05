@@ -1,5 +1,5 @@
 <?php
-require_once 'define_local.php';
+require_once 'define_sentora.php';
 
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 if ($mysqli->connect_errno) {
@@ -26,7 +26,7 @@ if ($res && ($res->num_rows > 0)) {
 function get_album() {
     global $mysqli;
     // Rédaction de la requete sur les photos
-    $query_str = "Select album.id, album.nom_album, album.date, album.nom_photo from album";
+    $query_str = "Select album.id, album.nom_album, album.date, album.nom_photo_album from album";
 
     $res = $mysqli->query($query_str); // Exécution de la requête
 
@@ -67,7 +67,7 @@ function get_photos_by_category($category_id) {
     global $mysqli;
     // Rédaction de la requete sur les photos
     $query_str = "Select photos.id, photos.nom_photo, photos.ordre, photos.date, photos.format, category.nom from photos
-    INNER JOIN category ON photos.category_id = category.id where category.id =" . $category_id;
+    INNER JOIN category ON photos.category_id = category.id where category.id = '$category_id' ORDER BY date DESC";
 
     $res = $mysqli->query($query_str); // Exécution de la requête
 
@@ -87,7 +87,9 @@ function get_photos_by_category($category_id) {
 function get_album_by_category($category_id) {
     global $mysqli;
     // Rédaction de la requete sur les photos
-    $query_str = "SELECT * FROM album WHERE category_id = " . $category_id;
+    $query_str = "SELECT album.id, album.nom_album, album.nom_photo_album, album.ordre, album.date, photos.category_id, photos.nom_photo
+                  FROM album INNER JOIN photos on album.id=photos.album_id WHERE photos.category_id= '$category_id' ORDER BY date DESC";
+    //$query_str = "SELECT * FROM `album` WHERE category_id = '$category_id' ORDER BY `date` DESC";
 
     $res = $mysqli->query($query_str); // Exécution de la requête
 

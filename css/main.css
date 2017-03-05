@@ -369,8 +369,19 @@ nav > ul > li > a {
     text-transform: uppercase;
 }
 
+#fleche {
+    display: none;
+    background-color: #cacaca;
+    width: 30px;
+    margin: auto;
+    position: fixed;
+    top: 450px;
+    right: 30px;
+}
 
-
+#fleche img {
+    width: 100%;
+}
 
 
 
@@ -773,6 +784,15 @@ footer #img-footer p a {
     }
 
 
+    /**** portfolio ****/
+    #engagement #fleche {
+        display: block;
+    }
+
+
+
+
+
     /**** formulaire contact et laisser un temoignage ****/
     #contact, #laisser-temoignage {
         padding: 30px;
@@ -941,6 +961,11 @@ footer #img-footer p a {
         font-size: 1.2rem;
     }
 
+
+    /**** portfolio ****/
+    #fleche {
+        display: block;
+    }
 
     /**** aside ****/
     #accueil aside div img {

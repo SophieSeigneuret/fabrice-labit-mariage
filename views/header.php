@@ -1,4 +1,4 @@
-<header class="wrapper">
+<header class="wrapper" id="header">
     <div id="social-link-header" class="row">
         <div class="col-8"></div>
         <a href="https://www.facebook.com/fabricelabitmariage/" target="_blank" class="col-1 col-s-3"><img src="images/social_facebook_gris.gif" alt="logo facebook gris"></a>

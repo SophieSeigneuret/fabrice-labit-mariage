@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Ven 03 Mars 2017 à 21:58
+-- Généré le :  Dim 05 Mars 2017 à 06:19
 -- Version du serveur :  5.6.34
 -- Version de PHP :  7.1.0
 
@@ -29,9 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `album` (
   `id` int(11) NOT NULL,
   `nom_album` varchar(128) NOT NULL,
-  `nom_photo` varchar(128) NOT NULL,
+  `nom_photo_album` varchar(128) NOT NULL,
   `date` date NOT NULL,
-  `category_id` int(11) NOT NULL,
   `ordre` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -39,18 +38,18 @@ CREATE TABLE `album` (
 -- Contenu de la table `album`
 --
 
-INSERT INTO `album` (`id`, `nom_album`, `nom_photo`, `date`, `category_id`, `ordre`) VALUES
-(1, 'Marine et Guillaume', 'couple_marine_guillaume.jpg', '2015-06-06', 2, 2),
-(2, 'Anne-Sophie et Pierre-Emmanuel', 'couple_anneso_pierremanu.jpg', '2015-09-05', 2, 4),
-(3, 'Olivia et Martin', 'couple_olivia_martin.jpg', '2015-09-12', 2, 5),
-(4, 'Anne-Sophie et Guillaume', 'couple_anneso_guillaume.jpg', '2016-06-11', 1, 6),
-(5, 'Marie et Colin', 'couple_marie_colin.jpg', '2016-08-20', 2, 7),
-(6, 'Fanny et Guillaume', 'couple_fanny_guillaume.jpg', '2016-09-24', 2, 8),
-(7, 'Elisabeth et Guillaume', 'couple_elisabeth_guillaume.jpg', '2016-10-22', 1, 9),
-(8, 'Sylvie et Franck', 'couple_sylvie_franck.jpg', '2015-05-12', 1, 1),
-(9, 'Marine et Guillaume', 'couple_marine_guillaume_eng.jpg', '2015-06-15', 1, 3),
-(10, 'Karine et JB', 'couple_karine_jb.jpg', '2016-10-23', 1, 10),
-(11, 'Leila et Roger', 'couple_leila_roger.jpg', '2016-10-23', 1, 11);
+INSERT INTO `album` (`id`, `nom_album`, `nom_photo_album`, `date`, `ordre`) VALUES
+(1, 'Marine et Guillaume', 'couple_marine_guillaume.jpg', '2015-06-06', 2),
+(2, 'Anne-Sophie et Pierre-Emmanuel', 'couple_anneso_pierremanu.jpg', '2015-09-05', 4),
+(3, 'Olivia et Martin', 'couple_olivia_martin.jpg', '2015-09-12', 5),
+(4, 'Anne-Sophie et Guillaume', 'couple_anneso_guillaume.jpg', '2016-06-11', 6),
+(5, 'Marie et Colin', 'couple_marie_colin.jpg', '2016-08-20', 7),
+(6, 'Fanny et Guillaume', 'couple_fanny_guillaume.jpg', '2016-09-24', 8),
+(7, 'Elisabeth et Guillaume', 'couple_elisabeth_guillaume.jpg', '2016-10-22', 9),
+(8, 'Sylvie et Franck', 'couple_sylvie_franck.jpg', '2015-05-12', 1),
+(9, 'Marine et Guillaume', 'couple_marine_guillaume_eng.jpg', '2015-06-15', 3),
+(10, 'Karine et JB', 'couple_karine_jb.jpg', '2016-10-23', 10),
+(11, 'Leila et Roger', 'couple_leila_roger.jpg', '2016-10-23', 11);
 
 -- --------------------------------------------------------
 
@@ -189,7 +188,52 @@ INSERT INTO `photos` (`id`, `nom_photo`, `category_id`, `album_id`, `ordre`, `da
 (98, 'engagement_13.jpg', 3, 9, 13, '2015-06-12', 'paysage'),
 (99, 'engagement_14.jpg', 3, 9, 14, '2015-06-12', 'paysage'),
 (100, 'engagement_15.jpg', 3, 9, 15, '2015-06-12', 'portrait'),
-(101, 'engagement_16.jpg', 3, 9, 16, '2015-06-12', 'paysage');
+(101, 'engagement_16.jpg', 3, 9, 16, '2015-06-12', 'paysage'),
+(102, 'mariage_62.jpg', 2, 6, 62, '2016-09-24', 'paysage'),
+(103, 'mariage_63.jpg', 2, 6, 63, '2016-09-24', 'paysage'),
+(104, 'mariage_64.jpg', 2, 6, 64, '2016-09-24', 'paysage'),
+(105, 'mariage_65.jpg', 2, 6, 65, '2016-09-24', 'paysage'),
+(106, 'mariage_66.jpg', 2, 6, 66, '2016-09-24', 'paysage'),
+(107, 'mariage_67.jpg', 2, 6, 67, '2016-09-24', 'paysage'),
+(108, 'mariage_68.jpg', 2, 6, 68, '2016-09-24', 'paysage'),
+(109, 'mariage_69.jpg', 2, 6, 69, '2016-09-24', 'paysage'),
+(110, 'mariage_70.jpg', 2, 6, 70, '2016-09-24', 'paysage'),
+(111, 'mariage_71.jpg', 2, 6, 71, '2016-09-24', 'paysage'),
+(112, 'mariage_72.jpg', 2, 6, 72, '2016-09-24', 'paysage'),
+(113, 'engagement_17.jpg', 3, 4, 17, '2016-06-11', 'paysage'),
+(114, 'engagement_18.jpg', 3, 4, 18, '2016-06-11', 'paysage'),
+(115, 'engagement_19.jpg', 3, 4, 19, '2016-06-11', 'paysage'),
+(116, 'engagement_20.jpg', 3, 4, 20, '2016-06-11', 'paysage'),
+(117, 'engagement_21.jpg', 3, 4, 21, '2016-06-11', 'paysage'),
+(118, 'engagement_22.jpg', 3, 4, 22, '2016-06-11', 'paysage'),
+(119, 'engagement_23.jpg', 3, 4, 23, '2016-06-11', 'paysage'),
+(120, 'engagement_24.jpg', 3, 4, 24, '2016-06-11', 'paysage'),
+(121, 'engagement_25.jpg', 3, 4, 25, '2016-06-11', 'paysage'),
+(122, 'engagement_26.jpg', 3, 4, 26, '2016-06-11', 'paysage'),
+(123, 'engagement_27.jpg', 3, 7, 27, '2016-10-22', 'paysage'),
+(124, 'engagement_28.jpg', 3, 7, 28, '2016-10-22', 'paysage'),
+(125, 'engagement_29.jpg', 3, 7, 29, '2016-10-22', 'paysage'),
+(126, 'engagement_30.jpg', 3, 7, 30, '2016-10-22', 'paysage'),
+(127, 'engagement_31.jpg', 3, 7, 31, '2016-10-22', 'paysage'),
+(128, 'engagement_32.jpg', 3, 7, 32, '2016-10-22', 'paysage'),
+(129, 'engagement_33.jpg', 3, 7, 33, '2016-10-22', 'paysage'),
+(130, 'engagement_34.jpg', 3, 7, 34, '2016-10-22', 'paysage'),
+(131, 'engagement_35.jpg', 3, 7, 35, '2016-10-22', 'paysage'),
+(132, 'engagement_36.jpg', 3, 7, 36, '2016-10-22', 'paysage'),
+(133, 'engagement_37.jpg', 3, 10, 37, '2016-10-23', 'paysage'),
+(134, 'engagement_38.jpg', 3, 10, 38, '2016-10-23', 'paysage'),
+(135, 'engagement_39.jpg', 3, 10, 39, '2016-10-23', 'paysage'),
+(136, 'engagement_40.jpg', 3, 10, 40, '2016-10-23', 'paysage'),
+(137, 'engagement_41.jpg', 3, 10, 41, '2016-10-23', 'paysage'),
+(138, 'engagement_42.jpg', 3, 10, 42, '2016-10-23', 'paysage'),
+(139, 'engagement_43.jpg', 3, 10, 43, '2016-10-23', 'paysage'),
+(140, 'engagement_44.jpg', 3, 10, 44, '2016-10-23', 'paysage'),
+(141, 'engagement_45.jpg', 3, 10, 45, '2016-10-23', 'paysage'),
+(142, 'engagement_46.jpg', 3, 11, 46, '2016-10-29', 'paysage'),
+(143, 'engagement_47.jpg', 3, 11, 47, '2016-10-29', 'paysage'),
+(144, 'engagement_48.jpg', 3, 11, 48, '2016-10-29', 'paysage'),
+(145, 'engagement_49.jpg', 3, 11, 49, '2016-10-29', 'paysage'),
+(146, 'engagement_50.jpg', 3, 11, 50, '2016-10-29', 'paysage');
 
 --
 -- Index pour les tables exportées
@@ -231,7 +275,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT pour la table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

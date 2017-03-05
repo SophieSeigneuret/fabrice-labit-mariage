@@ -54,7 +54,7 @@ require_once 'db/db_access.php';
 require_once 'views/header.php';
 ?>
 
-<!-- sélection de la page préparatifs ou engagement -->
+<!-- sélection des pages préparatifs, engagement, mariage_détail -->
 <?php
 $is_mariage = array_key_exists(MARIAGE, $_GET);
 if (!$is_mariage) {
@@ -66,7 +66,7 @@ if (!$is_mariage) {
         $photos = get_photos_by_category(3);
         $titre = 'Engagement';
         $id_main = 'engagement';
-    } else  {
+    } else {
         $photos = get_photos_mariage_by_album($_GET['id']);
         $titre = 'Mariage';
         $id_main = 'mariage_detail';
@@ -74,11 +74,10 @@ if (!$is_mariage) {
     ?>
     <main class="wrapper" id="<?= $id_main ?>">
         <h2><?= $titre ?></h2>
-        <?php if (array_key_exists('mariage_detail', $_GET)) {
-            //var_dump($photos[0]['nom_album']);?>
+        <?php if (array_key_exists('mariage_detail', $_GET)) { ?>
             <h3><?= $photos[0]['nom_album'] ?></h3>
             <a href="portfolio.php?mariage">retour</a>
-        <?php }  ?>
+        <?php } ?>
         <div class="content ajax-content">
             <ul class="portfolio-grid">
                 <?php foreach ($photos as $id => $photo) { ?>
@@ -90,11 +89,16 @@ if (!$is_mariage) {
                     </li>
                 <?php } ?>
             </ul>
+            <?php if (array_key_exists('mariage_detail', $_GET)) { ?>
+                <a href="portfolio.php?<?= $id_main ?>&id=<?= $_GET['id'] ?>" id="fleche"><img src="images/fleche_haut.gif" alt="flèche vers le haut"></a>
+            <?php } else { ?>
+                <a href="portfolio.php?<?= $id_main ?>" id="fleche"><img src="images/fleche_haut.gif" alt="flèche vers le haut"></a>
+            <?php } ?>
         </div>
         <?php if (array_key_exists('mariage_detail', $_GET)) {
             //var_dump($photos[0]['nom_album']);?>
             <a href="portfolio.php?mariage">retour</a>
-        <?php }  ?>
+        <?php } ?>
     </main>
 <?php } else {
 
@@ -108,7 +112,7 @@ if (!$is_mariage) {
             <ul class="portfolio-grid">
                 <?php foreach ($album_mariage as $id => $album) { ?>
                     <li class="grid-item">
-                        <img src="<?= IMG_PATH, $album['nom_photo'] ?>" alt="photo couple">
+                        <img src="<?= IMG_PATH, $album['nom_photo_album'] ?>" alt="photo couple">
                         <a href="portfolio.php?mariage_detail&id=<?= $album['id'] ?>">
                             <div class="grid-hover">
                                 <h1><?= $album['nom_album'] ?></h1>
@@ -118,29 +122,11 @@ if (!$is_mariage) {
                     </li>
                 <?php } ?>
             </ul>
+<!--            <a href="portfolio.php?mariage" id="fleche"><img src="images/fleche_haut.gif" alt="flèche vers le haut"></a>-->
         </div>
-
-<!--        --><?php //$photo_mariage = get_photos_mariage_by_album(2);
-//        ?>
-<!--        <div class="content ajax-content" id="mariage">-->
-<!--            <ul class="portfolio-grid">-->
-<!--                --><?php //foreach ($photo_mariage as $id => $photo) { ?>
-<!--                    <li class="grid-item">-->
-<!--                        <a href="--><?//= IMG_PATH, $photo['nom_photo'] ?><!--" data-fancybox="gallery">-->
-<!--                            <img src="--><?//= IMG_PATH, $photo['nom_photo'] ?><!--" alt="photo mariage">-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                --><?php //} ?>
-<!--            </ul>-->
-<!--        </div>-->
-
     </main>
 
 <?php } ?>
-
-
-
-
 
 
 <?php
