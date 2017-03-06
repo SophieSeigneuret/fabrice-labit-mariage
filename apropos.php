@@ -33,9 +33,9 @@ require_once 'views/header.php';
         <img src="images/photo-fabrice-labit-big-v.jpg" alt="photo Fabrice Labit">
         <img src="images/photo-fabrice-labit-big-h.jpg" alt="photo Fabrice Labit">
         <div>
-            <p>Il est très important pour ce jour unique d'avoir l'assurance de faire appel à un photographe professionnel
+            <p>Il est très important pour ce jour unique d'avoir l'assurance de faire appel à un <strong>photographe professionnel</strong>
                 pour que votre journée soit capturée dans les meilleures conditions quelles que soient les circonstances. En
-                observateur discret, je couvre les mariages en mode photoreportage. </p>
+                observateur discret, je couvre les <strong>mariages</strong> en mode photoreportage. </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id eros elit. Phasellus luctus eros leo, eu
                 elementum ipsum suscipit id. Integer dictum, quam lacinia lacinia tincidunt, est erat suscipit massa, vitae
                 sagittis nisi ligula ut augue. Cras libero est, vestibulum eu sollicitudin a, interdum a enim. Integer

@@ -614,6 +614,15 @@ strong {
     text-transform: uppercase;
 }
 
+#form-contact input[type=submit]:hover, #form-temoignage input[type=submit]:hover {
+    background-color: #cacaca;
+}
+
+#form-contact input[type=submit]:active, #form-temoignage input[type=submit]:active {
+    background-color: #ff6b70;
+}
+
+
 /* messages d'ereur pour type, budget et textarea */
 #form-contact>div:nth-of-type(6) p, #form-contact>div:nth-of-type(7) p,#form-contact>div:nth-of-type(9) p {
     margin-top: 8px;

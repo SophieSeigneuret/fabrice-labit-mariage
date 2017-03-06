@@ -24,7 +24,7 @@ function envoi_mail($mail_from, $msg) {
     $header= "Reply-to: ".$mail_from.$passage_ligne;
     $header.= "MIME-Version: 1.0".$passage_ligne;
     $header.= "Content-Type: multipart/mixed;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
-    var_dump($header);
+    // var_dump($header);
 //==========
 
 //=====Création du message.

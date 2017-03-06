@@ -1,5 +1,7 @@
 <?php
 $page_title = 'Laissez un témoignage';
+require_once 'envoi_mail.php';
+require_once 'traitement_donnees.php';
 
 // Affichage initial du formulaire ? ou bien réception des données ?
 $en_reception = array_key_exists('nom', $_POST)
@@ -56,8 +58,8 @@ if (array_key_exists('message', $_POST)) {
 /* validation */
 if ($en_reception && $nom_valide && $email_valide && $type_valide && $lieu_valide && $message_valide) {
     // les données de formulaire sont valides
-//    $info_mail_contact = infos_mail_contact($nom, $telephone, $email, $date, $lieu, $type, $budget, $reponse, $message);
-//    envoi_mail($email, utf8_encode($info_mail_contact));
+    $info_mail_temoignage = infos_mail_temoignage($nom, $email, $type, $lieu, $message);
+    envoi_mail($email, utf8_encode($info_mail_temoignage));
 }
 
 

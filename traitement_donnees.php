@@ -17,18 +17,30 @@ function infos_mail_contact($nom, $tel, $mail, $date, $lieu, $type, $budget, $re
     $msg.= "Date de l'événement : ".$date."\n";
     $msg.= "Lieu de l'événement : ".$lieu."\n";
 
+    $temp = '';
+    foreach ($type as $typ) {
+        $temp .= $typ . ' ';
+    }
+    $msg.= "Type d'événement : ".$temp."\n";
+
+    $msg.= "Budget prévu : ".$budget." €\n";
+    $msg.= "Vous m'avez connu par : ".$reponse."\n";
+    $msg.= "Votre message : ".$message;
+
+    return $msg;
+}
+
+
+function infos_mail_temoignage($nom, $mail, $type, $lieu, $message) {
+    $msg = "Nom : ".$nom."\n";
+    $msg.= "Email : ".$mail."\n";
 
     $temp = '';
     foreach ($type as $typ) {
         $temp .= $typ . ' ';
     }
-
-
-
-//    $msg.= "Type d'événement : ".$type."\n";
     $msg.= "Type d'événement : ".$temp."\n";
-    $msg.= "Budget prévu : ".$budget." €\n";
-    $msg.= "Vous m'avez connu par : ".$reponse."\n";
+    $msg.= "Lieu de l'événement : ".$lieu."\n";
     $msg.= "Votre message : ".$message;
 
     return $msg;
