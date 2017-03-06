@@ -1,18 +1,42 @@
-<header class="wrapper" id="header">
-    <div id="social-link-header" class="row">
-        <div class="col-8"></div>
-        <a href="https://www.facebook.com/fabricelabitmariage/" target="_blank" class="col-1 col-s-3"><img src="images/social_facebook_gris.gif" alt="logo facebook gris"></a>
-        <a href="https://www.instagram.com/fabricelabit/" target="_blank" class="col-1 col-s-3"><img src="images/social_instagram_gris.gif" alt="logo instagram gris"></a>
-        <a href="https://fr.pinterest.com/fabricelabit/" target="_blank" class="col-1 col-s-3"><img src="images/social_pinterest_gris.gif" alt="logo pinterest gris"></a>
-        <a href="https://twitter.com/fabricelabit" target="_blank" class="col-1 col-s-3"><img src="images/social_twitter_gris.gif" alt="logo twitter gris"></a>
-    </div>
+<?php
+$page_title = 'Erreur';
+
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fabrice Labit | Photographe de mariage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Roboto:300" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/gif" href="images/logo_icon.gif"/>
+    <meta name="description"
+          content="Votre photographe Fabrice Labit fera de votre mariage ou engagement le meilleur souvenir qu'il soit grâce à sa discrétion et la qualité de ses photos."/>
+    <!-- balises Open Graph Facebook -->
+    <meta property="og:url" content="http://www.fabrice-labit-mariage.com/index.php"/>
+    <meta property="og:title" content="Fabrice Labit | Photographe de mariage"/>
+    <meta property="og:description"
+          content="Votre photographe Fabrice Labit fera de votre mariage ou engagement le meilleur souvenir qu'il soit grâce à sa discrétion et la qualité de ses photos."/>
+    <meta property="og:image" content="http://www.fabrice-labit-mariage.com/images/...."/>
+</head>
+<body>
+<header id="header_erreur">
     <div id="logo-header" itemscope itemtype="http://schema.org/Photograph">
         <a href="index.php"><img src="images/logo-fabrice-labit-mariage.jpg" alt="logo Fabrice Labit Mariage"></a>
         <h1><span itemprop="author">Fabrice Labit</span> <span itemprop="genre">Mariage</span></h1>
     </div>
-    <nav>
-        <a class="mobile_menu" title="Menu" href="#">Menu</a>
-        <ul id="menu">
+</header>
+<main class="wrapper" id="error">
+    <h2>Désolé, page non trouvée</h2>
+    <a href="index.php">Retour à la page d'accueil</a>
+    <p>Plan du site :</p>
+    <div id="plan">
+        <ul>
             <li><a href="index.php" class="<?php if ($page_title == 'Accueil') { echo 'active'; } ?>">ACCUEIL</a></li>
             <li><a href="portfolio.php?mariage" class="<?php if ($page_title == 'Portfolio') { echo 'active'; } ?>">PORTFOLIO</a>
                 <ul>
@@ -35,5 +59,12 @@
             </li>
             <li><a href="contact.php" class="<?php if ($page_title == 'Contact') { echo 'active'; } ?>">CONTACT</a></li>
         </ul>
-    </nav>
-</header>
+    </div>
+</main>
+
+<?php
+require_once 'views/footer.php';
+require_once 'views/script_carousel.php';
+?>
+</body>
+</html>

@@ -2,7 +2,11 @@
 $page_title = 'Laissez un témoignage';
 
 // Affichage initial du formulaire ? ou bien réception des données ?
-$en_reception = array_key_exists('nom', $_POST);
+$en_reception = array_key_exists('nom', $_POST)
+    && array_key_exists('email', $_POST)
+    && array_key_exists('lieu', $_POST)
+    && array_key_exists('message', $_POST);
+
 
 // Réception du nom
 $nom = '';
@@ -48,6 +52,15 @@ if (array_key_exists('message', $_POST)) {
 }
 
 
+
+/* validation */
+if ($en_reception && $nom_valide && $email_valide && $type_valide && $lieu_valide && $message_valide) {
+    // les données de formulaire sont valides
+//    $info_mail_contact = infos_mail_contact($nom, $telephone, $email, $date, $lieu, $type, $budget, $reponse, $message);
+//    envoi_mail($email, utf8_encode($info_mail_contact));
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -87,6 +100,7 @@ require_once 'views/header.php';
 
     <div>
         <p>Je vous serais très reconnaissant de me laisser un témoignage de sympathie et dire si vous avez apprécié mon travail.</p>
+
         <form action="laisser_temoignage.php" id="form-temoignage" method="post">
             <!-- champ nom -->
             <div class="row">
@@ -145,12 +159,22 @@ require_once 'views/header.php';
             </div>
             <input type="submit" name="submit" value="Envoyer">
         </form>
+
+        <!-- affichage boite de dialog -->
+        <?php if ($en_reception && $nom_valide && $email_valide && $type_valide && $lieu_valide && $message_valide) { ?>
+            <div id="dialog" title="Confirmation">
+                <p>Votre témoignage a bien été envoyé à Fabrice.</p>
+                <p>Il sera affiché dans les plus brefs délais.</p>
+                <p>Merci pour votre confiance.</p>
+                <a href="index.php">retour à la page d'accueil</a>
+            </div>
+        <?php } ?>
     </div>
 </main>
 
 <?php
 require_once 'views/footer.php';
+require_once 'views/script_formulaires.php';
 ?>
-<script src="scripts/main.js"></script>
 </body>
 </html>

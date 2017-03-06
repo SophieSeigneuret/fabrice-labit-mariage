@@ -138,12 +138,13 @@ nav a.mobile_menu {
     display: none;
     /*border-top: 1px solid #cacaca;*/
     /*border-bottom: 1px solid #cacaca;*/
-    padding: 7px 0 34px;
+    padding: 6px 0 34px;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: #cacaca;
+    line-height: 2rem;
 }
 
 nav ul::after {
@@ -244,6 +245,9 @@ nav > ul > li > a {
     color: #6c6c6c;
 }
 
+strong {
+    font-weight: 300;
+}
 
 
 /****************************/
@@ -544,17 +548,6 @@ nav > ul > li > a {
     font-weight: 300;
 }
 
-/* champs invalides */
-.invalid {
-    color: #ff6b70;
-}
-
-#form-contact p, #form-temoignage p {
-    color: #ff6b70;
-    font-size: 0.8rem;
-    margin-top: 0;
-}
-
 
 
 
@@ -640,6 +633,81 @@ nav > ul > li > a {
 }
 
 
+/* champs invalides */
+.invalid {
+    color: #ff6b70;
+}
+
+#form-contact p, #form-temoignage p {
+    color: #ff6b70;
+    font-size: 0.8rem;
+    margin-top: 0;
+}
+
+
+
+
+/****************************/
+/* DIALOG FORMULAIRES */
+/****************************/
+.ui-widget.ui-widget-content {
+    border: 1px solid #ff6b70;
+}
+
+.ui-corner-all {
+    border-radius: 0;
+}
+
+.ui-dialog {
+    padding: 0;
+}
+
+.ui-widget-header {
+    border: none;
+    background: #ff6b70;
+}
+
+/* titre "confirmation" */
+.ui-dialog .ui-dialog-title {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.5rem;
+    padding-top: 4px;
+}
+
+#dialog p {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    color: #6c6c6c;
+    margin: 0 0 10px;
+}
+
+#dialog a {
+    display: block;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #cacaca;
+    margin-top: 20px;
+}
+
+#dialog a:hover {
+    color: #ff6b70;
+}
+
+.ui-dialog .ui-dialog-content {
+    padding: 1.5em 1em;
+}
+
+
+
+
 /****************************/
 /* FOOTER */
 /****************************/
@@ -667,8 +735,10 @@ nav > ul > li > a {
     background-color: #6c6c6c;
 }
 
+/* pictos liens sociaux */
 #social-link-footer div:first-of-type img {
-    padding: 8px;
+    width: 100%;
+    padding: 5px;
 }
 
 #social-link-footer div {
@@ -750,6 +820,75 @@ footer #img-footer p a {
 
 
 
+
+/****************************/
+/* PAGE D'ERREUR */
+/****************************/
+
+/* logo */
+#header_erreur {
+    position: relative;
+    top: 50px;
+}
+
+
+#error h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top:100px;
+    color: #ff6b70;
+}
+
+#error>a {
+    display: block;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #cacaca;
+    color: #fff;
+    height: 30px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+/* texte "plan du site" */
+#error p {
+    text-align: center;
+    color: #6c6c6c;
+    margin: 100px 0 0;
+}
+
+/* menu */
+#error #plan>ul {
+    text-align: center;
+}
+
+/* premiers li */
+#error #plan>ul>li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 35px 0;
+    text-align: left;
+}
+
+#error #plan>ul>li a {
+    color: #6c6c6c;
+}
+
+/* deuxièmes li */
+#error #plan ul ul li {
+    text-align: left;
+}
+
+#error #plan ul ul li a {
+    color: #cacaca;
+    font-size: 0.9rem;
+}
+
+/* hover */
+#error a:hover {
+    color: #6c6c6c;
+}
 
 
 
@@ -851,14 +990,6 @@ footer #img-footer p a {
 
 
 
-    /**** footer ****/
-    #social-link-footer div:first-of-type a {
-        margin: 0 10px;
-    }
-
-
-
-
     /**** faqs ****/
     #faq div:last-of-type {
         padding: 30px;
@@ -881,11 +1012,10 @@ footer #img-footer p a {
 
 
 
-
-
-
-
-
+    /**** page erreur ****/
+    #error #plan>ul>li {
+        margin: 20px 20px 0;
+    }
 
 
 
@@ -1039,19 +1169,19 @@ footer #img-footer p a {
 
 
 
-    /* page à propos */
-    #apropos>div img:first-of-type {
-        display: none;
-    }
+    /*!* page à propos *!*/
+    /*#apropos>div img:first-of-type {*/
+        /*display: none;*/
+    /*}*/
 
-    #apropos>div img:last-of-type {
-        display: block;
-        float: none;
-        margin: 0 auto;
-        width: 100%;
-        padding: 0 20px;
-        max-width: 330px;
-    }
+    /*#apropos>div img:last-of-type {*/
+        /*display: block;*/
+        /*float: none;*/
+        /*margin: 0 auto;*/
+        /*width: 100%;*/
+        /*padding: 0 20px;*/
+        /*max-width: 330px;*/
+    /*}*/
 
 
 
@@ -1118,6 +1248,22 @@ footer #img-footer p a {
 
 
 
+
+    /**** page erreur ****/
+    #error #plan>ul>li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    #error #plan>ul>li {
+        text-align: center;
+    }
+
+    #error #plan ul ul li {
+        text-align: center;
+    }
+
+
 }
 
 
@@ -1149,6 +1295,21 @@ footer #img-footer p a {
     /**** carousel ****/
     #accueil section {
         padding: 0;
+    }
+
+
+    /* page à propos */
+    #apropos>div img:first-of-type {
+        display: none;
+    }
+
+    #apropos>div img:last-of-type {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px;
+        max-width: 330px;
     }
 
 

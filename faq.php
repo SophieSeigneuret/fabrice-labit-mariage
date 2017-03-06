@@ -39,21 +39,39 @@ require_once 'views/header.php';
 
     <div>
         <h3>Est ce que vous vous déplacez en dehors de Paris?</h3>
-        <p>Paris et sa région est ma zone de prédilection. Cependant je peux vous accompagner partout en France ou à
-            l’étranger. J’essaye d’accepter un moins un ou deux mariages à l’étranger afin de découvrir de nouveaux
+        <p><strong>Paris</strong> et sa région est ma zone de prédilection. Cependant je peux vous accompagner partout
+            en <strong>France</strong> ou à
+            l’étranger. J’essaye d’accepter au moins un ou deux mariages à l’étranger afin de découvrir de nouveaux
             paysages et développer ma créativité.</p>
         <h3>Travaillez vous seul?</h3>
-        <p>En général, je travaille seul car j’ai mon style, ma façon de travailler et ma philosophie. Cependant, au delà d’un certain nombre d’invités, je me fais accompagner d’un « second photographe » afin de couvrir votre mariage avec plus de confort.</p>
-        <h3>Proposez vous des livres de mariage?</h3>
-        <p>Bien sûr, je propose des livres de mariage de très grande qualité afin de mettre en valeur les photos de votre mariage de la plus belle façon qui soit. Je suis conscient qu’en tant que photographe, il faut ne faut pas proposer que des photos au format numérique qui vont rester dans un coin de votre disque dur. En 2015, j’ai donc décidé de me rendre à la WPPI à Las Vegas aux Etats Unis afin de rencontrer les plus grands fournisseurs d’albums au monde. La WPPU est l’une des plus grandes réunions de photographe du monde où se tient un grand salon en marge de nombreuses conférences photo.</p>
+        <p>En général, je travaille seul car j’ai mon style, ma façon de travailler et ma philosophie. Cependant, au
+            delà d’un certain nombre d’invités, je me fais accompagner d’un « second photographe » afin de couvrir votre
+            mariage avec plus de confort.</p>
+        <h3>Proposez vous des <strong>livres de mariage</strong>?</h3>
+        <p>Bien sûr, je propose des <strong>livres de mariage</strong> de très grande qualité afin de mettre en valeur les photos de
+            votre mariage de la plus belle façon qui soit. Je suis conscient qu’en tant que <strong>photographe</strong>, il faut ne faut
+            pas proposer que des photos au format numérique qui vont rester dans un coin de votre disque dur. En 2015,
+            j’ai donc décidé de me rendre à la WPPI à Las Vegas aux Etats Unis afin de rencontrer les plus grands
+            fournisseurs d’albums au monde. La WPPU est l’une des plus grandes réunions de photographe du monde où se
+            tient un grand salon en marge de nombreuses conférences photo.</p>
         <h3>Comment faire pour vous réserver?</h3>
-        <p>Après un ou plusieurs contacts par mails, téléphone ou skype, je vous transmet un contrat à me retourner signé accompagné d’un chèque d’acompte de 30% de la totalité de la somme. Le solde étant à me remettre le jour de votre mariage. Une fois le contrat et l’acompte reçu, la date est bloqué!</p>
+        <p>Après un ou plusieurs contacts par mails, téléphone ou skype, je vous transmet un contrat à me retourner
+            signé accompagné d’un chèque d’acompte de 30% de la totalité de la somme. Le solde étant à me remettre le
+            jour de votre <strong>mariage</strong>. Une fois le contrat et l’acompte reçu, la date est bloquée!</p>
         <h3>Quels sont les services inclus dans le forfait mariage ?</h3>
-        <p>Mes différents forfaits mariage incluent la préparation de votre mariage (nombreux contacts par téléphone, mail etc.), ma présence le jour-J, la post-production, la livraison avec un packaging personnalisé et bien plus encore.</p>
+        <p>Mes différents forfaits <strong>mariage</strong> incluent la <strong>préparation de votre mariage</strong> (nombreux contacts par téléphone,
+            mail etc.), ma présence le jour-J, la post-production, la livraison avec un packaging personnalisé et bien
+            plus encore.</p>
         <h3>Combien de photos livrez-vous pour un mariage?</h3>
-        <p>Il est difficile de prévoir le nombre de photos délivrées pour un mariage. Cela dépend de l’intensité de la journée et de la durée de la couverture photographique. Cependant, je délivre environ 600 photos retouchées (et plus) par mariage.</p>
+        <p>Il est difficile de prévoir le nombre de photos délivrées pour un mariage. Cela dépend de l’intensité de la
+            journée et de la durée de la couverture photographique. Cependant, je délivre environ 600 photos retouchées
+            (et plus) par mariage.</p>
         <h3>Quelle solution proposez-vous en cas d’indisponibilité de dernière minute?</h3>
-        <p>Sachez tout d’abord que cela ne m’est jamais arrivé, oui jamais. J’ai conscience de l’importance de cette journée et qu’un mariage ne se déroule qu’une seule fois. Sachant cela, il me faut plus qu’un rhume ou une vilaine douleur pour ne pas honorer le mariage. S’il m’arrivait donc quelque chose de grave, je chercherai parmi mes contacts un photographe avec un style photographique approchant du mien et sans surcoût tarifaire.</p>
+        <p>Sachez tout d’abord que cela ne m’est jamais arrivé, oui jamais. J’ai conscience de l’importance de cette
+            journée et qu’un mariage ne se déroule qu’une seule fois. Sachant cela, il me faut plus qu’un rhume ou une
+            vilaine douleur pour ne pas honorer le mariage. S’il m’arrivait donc quelque chose de grave, je chercherai
+            parmi mes contacts un photographe avec un style photographique approchant du mien et sans surcoût
+            tarifaire.</p>
     </div>
 </main>
 

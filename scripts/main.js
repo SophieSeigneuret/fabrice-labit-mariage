@@ -26,5 +26,10 @@ $(document).ready(function () {
 
     });
 
+
+    /* focus sur 1er champs en erreur formulaire */
+    $(".error:first").focus();
+
+
 });
 

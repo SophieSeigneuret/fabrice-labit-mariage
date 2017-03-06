@@ -54,11 +54,11 @@ function envoi_mail($mail_from, $msg) {
     $message.= $passage_ligne."--".$boundary.$passage_ligne;
 
 //=====Envoi de l'e-mail.
-    if(mail($mail,$sujet,$message,$header, "-f".$mail_from))
-    {
-        echo "Mail envoyé";
-    }else {
-        echo "boulette";
-    }
+//    if(mail($mail,$sujet,$message,$header, "-f".$mail_from))
+//    {
+//        echo "Mail envoyé";
+//    }else {
+//        echo "boulette";
+//    }
 
 }

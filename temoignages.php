@@ -30,11 +30,11 @@ require_once 'views/header.php';
 <main class="wrapper" id="temoignages">
     <h2>Ils m’ont fait confiance</h2>
 
-    <div>
+    <div itemscope itemtype="http://schema.org/Photograph">
         <img src="images/photo-mariage-marine-guillaume.jpg" alt="photo mariage Marine et Guillaume"><!--
      --><div>
             <h3>Marine & Guillaume - Mariage à paris</h3>
-            <p>Fabrice a fait un travail fantastique, aussi bien pour notre session engagement que pour le jour J. Les
+            <p itemprop="comment">Fabrice a fait un travail fantastique, aussi bien pour notre session engagement que pour le jour J. Les
                 photos sont vraiment belles et transcrivent parfaitement l’atmosphère de la journée. Nous avons beaucoup
                 de mal à choisir celles que nous allons encadrer. Il y en a tant!
                 En plus d’etre un vrai pro, Fabrice est vraiment sympathique et discret. Nous avons beaucoup apprecié
@@ -48,7 +48,7 @@ require_once 'views/header.php';
         <img src="images/photo-mariage-rebecca-isaac.jpg" alt="photo mariage Rebecca et Isaac" ><!--
      --><div>
             <h3>Rebecca & Isaac - Mariage à paris</h3>
-            <p>Fabrice nous a offert le plus beau des cadeaux de mariage en acceptant de traverser la campagne Picarde
+            <p itemprop="comment">Fabrice nous a offert le plus beau des cadeaux de mariage en acceptant de traverser la campagne Picarde
                 sous la grisaille pour venir couvrir notre mariage dans le petit village de Francières en Août dernier.
                 Fabrice est un artiste très talentueux, un photographe discret et passionné, une personne généreuse
                 et pleine de douceur.
@@ -62,7 +62,7 @@ require_once 'views/header.php';
         <img src="images/photo-engagement-sylvie-franck.jpg" alt="photo engagement Sylvie et Franck" ><!--
      --><div>
             <h3>Sylvie & Franck - Séance engagement à Versailles</h3>
-            <p>Merci pour les photos, nous sommes très contents du rendu des photos ! Sur certaines photos on se
+            <p itemprop="comment">Merci pour les photos, nous sommes très contents du rendu des photos ! Sur certaines photos on se
                 trouve même beau ;) et surtout tu as réussi à capter notre naturel et notre complicité ! Nous, c’est ce
                 qu’on ressent quand on regarde les photos. On s’est dit souvent: “là je te reconnais” ou “on a l’air
                 complices”. Nous avons hâte de faire les prochaines séances sous la neige puis quand il fera bon. On

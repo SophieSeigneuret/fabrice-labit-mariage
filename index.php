@@ -64,9 +64,9 @@ require_once 'views/header.php';
         <img src="images/fabrice-labit.jpg" alt="photo de profil de Fabrice Labit" /><!--
      --><div>
             <h3>A propos de moi</h3>
-            <p>Il est très important pour ce jour unique d'avoir l'assurance de faire appel à un photographe
-                professionnel pour que votre journée soit capturée dans les meilleures conditions quelles que soient les
-                circonstances. En observateur discret, je couvre les mariages en mode photoreportage.</p>
+            <p>Il est très important pour ce jour unique d'avoir l'assurance de faire appel à un <strong>photographe
+                professionnel</strong> pour que votre journée soit capturée dans les meilleures conditions quelles que soient les
+                circonstances. En observateur discret, je couvre les <strong>mariages</strong> en mode photoreportage.</p>
             <a href="apropos.php">En savoir plus sur Fabrice</a>
         </div>
     </aside>
