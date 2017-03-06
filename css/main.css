@@ -134,7 +134,7 @@ nav a.mobile_menu {
     background-size: contain;
     position: absolute;
     top: 0;
-    margin-left: -90px;
+    margin-left: -10px;
     display: none;
     /*border-top: 1px solid #cacaca;*/
     /*border-bottom: 1px solid #cacaca;*/
@@ -167,9 +167,9 @@ nav ul ul li {
 nav ul li a {
     display: inline-block;
     color: #cacaca;
-    padding: 5px 30px;
+    padding: 5px 0;
     text-decoration: none;
-    width: 300px;
+    width: 100%;
     position: relative;
     text-transform: uppercase;
 }
@@ -182,6 +182,7 @@ nav ul ul {
     display: none;
     position: absolute;
     top: 100%;
+    padding-left: 30px;
 }
 
 nav ul ul li {
@@ -194,7 +195,6 @@ nav > ul > li {
 
 nav > ul > li > a {
     padding: 0 30px;
-    width: auto;
 }
 
 
@@ -386,8 +386,8 @@ nav > ul > li > a {
     width: 30px;
     margin: auto;
     position: fixed;
-    top: 450px;
-    right: 30px;
+    top: 70%;
+    right: 0;
 }
 
 #fleche img {
@@ -938,7 +938,7 @@ footer #img-footer p a {
     /**** menu navigation ****/
     nav {
         width: 80%;
-        padding: 40px 90px 0;
+        padding: 40px 10px 0;
         height: 0;
         overflow: hidden;
         border: 1px solid #cacaca;
@@ -983,11 +983,19 @@ footer #img-footer p a {
 
 
     nav ul>li {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     nav ul ul li {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    nav > ul > li > a {
+        padding: 0;
+    }
+
+    nav ul ul {
+        padding-left: 0;
     }
 
 
