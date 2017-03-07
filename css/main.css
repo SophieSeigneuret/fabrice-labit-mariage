@@ -84,11 +84,16 @@ li {
 /* liens sociaux header */
 #social-link-header {
     height: 50px;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #aa9e91;
+}
+
+#social-link-header a img {
+    height: 20px;
 }
 
 #social-link-header div {
-    height: 2px;
+    height: 50px;
+    text-align: center;
 }
 
 #social-link-header img {
@@ -106,24 +111,26 @@ li {
 }
 
 #logo-header img {
-    width: 70px;
+    width: 125px;
     position: relative;
-    top: -20px;
+    top: -62px;
 }
 
 #logo-header h1 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    margin: 0;
-    font-size: 1.5rem;
+    margin: 5px 0 0;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #5d5147;
+    letter-spacing: 2px;
     position: relative;
-    top: -20px;
+    top: -62px;
 }
 
 
 /**** menu navigation ****/
 nav {
-    margin: 50px auto 80px;
+    margin: 15px auto 80px;
     position: relative;
     width: 782px;
 }
@@ -136,14 +143,14 @@ nav a.mobile_menu {
     top: 0;
     margin-left: -10px;
     display: none;
-    /*border-top: 1px solid #bbb;*/
-    /*border-bottom: 1px solid #bbb;*/
+    /*border-top: 1px solid #aa9e91;*/
+    /*border-bottom: 1px solid #aa9e91;*/
     padding: 6px 0 34px;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
     font-size: 1.3rem;
-    background-color: #bbb;
+    background-color: #aa9e91;
     line-height: 2rem;
 }
 
@@ -167,7 +174,7 @@ nav ul ul li {
 
 nav ul li a {
     display: inline-block;
-    color: #bbb;
+    color: #aa9e91;
     padding: 5px 0;
     text-decoration: none;
     width: 100%;
@@ -176,7 +183,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #666;
+    color: #5d5147;
 }
 
 nav ul ul {
@@ -221,10 +228,10 @@ nav > ul > li > a {
     text-align: center;
     font-size: 1rem;
     font-weight: 300;
-    color: #666;
+    color: #5d5147;
     text-transform: uppercase;
-    border-top: 1px solid #bbb;
-    border-bottom: 1px solid #bbb;
+    border-top: 1px solid #aa9e91;
+    border-bottom: 1px solid #aa9e91;
     padding: 10px 20px;
     margin-bottom: 60px;
 }
@@ -233,16 +240,16 @@ nav > ul > li > a {
     text-align: center;
     font-size: 1rem;
     font-weight: 300;
-    color: #666;
+    color: #5d5147;
     text-transform: uppercase;
-    border-top: 1px solid #bbb;
-    border-bottom: 1px solid #bbb;
+    border-top: 1px solid #aa9e91;
+    border-bottom: 1px solid #aa9e91;
     padding: 10px 0;
     margin-bottom: 30px;
 }
 
 .active {
-    color: #666;
+    color: #5d5147;
 }
 
 strong {
@@ -262,7 +269,7 @@ strong {
 #accueil section img {
     width: 800px;
     padding: 20px;
-    border: 1px solid #bbb;
+    border: 1px solid #aa9e91;
     margin: 0 auto;
 }
 
@@ -272,7 +279,7 @@ strong {
     font-family: 'Comfortaa', cursive;
     font-weight: 300;
     /*font-style: italic;*/
-    color: #bbb;
+    color: #aa9e91;
     margin: 30px 0 5px;
 }
 
@@ -281,7 +288,7 @@ strong {
     font-size: 0.8rem;
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
-    color: #666;
+    color: #5d5147;
     text-transform: uppercase;
     margin: 0;
 }
@@ -289,8 +296,8 @@ strong {
 /* aside à propos du photographe */
 #accueil aside {
     margin-top: 100px;
-    border-top: 1px solid #bbb;
-    border-bottom: 1px solid #bbb;
+    border-top: 1px solid #aa9e91;
+    border-bottom: 1px solid #aa9e91;
 }
 
 #accueil aside>img, #accueil aside>div {
@@ -310,7 +317,7 @@ strong {
 #accueil aside div h3 {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #666;
+    color: #5d5147;
     text-transform: uppercase;
     margin: 15px 0;
     padding-right: 20px;
@@ -318,7 +325,7 @@ strong {
 }
 
 #accueil aside div p {
-    color: #666;
+    color: #000;
     font-size: 0.9rem;
     line-height: 1.2rem;
     font-weight: 300;
@@ -328,14 +335,14 @@ strong {
 
 #accueil aside div a {
     display: block;
-    color: #bbb;
+    color: #aa9e91;
     font-size: 0.9rem;
     font-weight: 300;
     margin: 15px 0;
 }
 
 #accueil aside div a:hover {
-    color: #666;
+    color: #5d5147;
 }
 
 
@@ -353,6 +360,23 @@ strong {
 
 
 
+/* contactez-moi */
+#accueil>a {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: #aa9e91;
+    width: 250px;
+    height: 50px;
+    line-height: 52px;
+    text-transform: uppercase;
+    margin: 100px auto 0;
+    font-size: 1.2rem;
+}
+
+
+
+
 
 /****************************/
 /* MAIN PORTFOLIO */
@@ -367,7 +391,7 @@ strong {
 }
 
 #mariage_detail>h3 {
-    color: #666;
+    color: #5d5147;
     margin-bottom: 20px;
     font-style: italic;
 }
@@ -375,7 +399,7 @@ strong {
 #mariage_detail>a {
     display: block;
     color: #fff;
-    background-color: #bbb;
+    background-color: #aa9e91;
     width: 100px;
     margin: 0 auto;
     line-height: 28px;
@@ -386,7 +410,7 @@ strong {
 
 #fleche {
     display: none;
-    background-color: #bbb;
+    background-color: #aa9e91;
     width: 30px;
     margin: auto;
     position: fixed;
@@ -409,15 +433,20 @@ strong {
 /* à propos de moi */
 #apropos>div img {
     float: left;
-    margin-right: 20px;
+    margin: 0 20px 0 15px;
+    width: 35%;
 }
 
 #apropos>div img:last-of-type {
     display: none;
 }
 
+#apropos>div div {
+    margin-right: 15px;
+}
+
 #apropos>div div p {
-    color: #666;
+    color: #000;
     font-size: 0.9rem;
     line-height: 1.2rem;
     font-weight: 300;
@@ -435,17 +464,18 @@ strong {
     margin: 20px 0 5px;
     text-transform: uppercase;
     font-weight: 300;
+    color: #5d5147;
 }
 
 #faq div:last-of-type p {
     font-size: 0.9rem;
     line-height: 1.2rem;
     margin: 0 0 30px;
-    color: #666;
+    color: #000;
     text-align: justify;
     font-weight: 300;
     padding-bottom: 30px;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #aa9e91;
 }
 
 #faq div:last-of-type p:last-of-type {
@@ -469,12 +499,13 @@ strong {
     line-height: 1.4rem;
     text-transform: uppercase;
     margin: 0 0 10px;
+    color: #5d5147;
 }
 
 #temoignages div p {
     font-size: 0.9rem;
     line-height: 1.2rem;
-    color: #666;
+    color: #000;
     text-align: justify;
     margin: 0;
 }
@@ -498,12 +529,12 @@ strong {
     padding: 0 15px;
 }
 
-/* texte avant formulaire */
+/* texte avant formulaire temoignage */
 #laisser-temoignage>div:last-of-type>p {
     font-size: 0.9rem;
     line-height: 1.2rem;
     margin: 60px 0 80px;
-    color: #666;
+    color: #000;
     text-align: center;
     font-weight: 300;
     padding: 0 15px;
@@ -522,9 +553,8 @@ strong {
 #contact>div:last-of-type h2 {
     text-align: center;
     font-weight: 300;
-    font-style: italic;
     font-size: 1.3rem;
-    color: #666;
+    color: #5d5147;
     margin: 50px 0 0;
 }
 
@@ -533,7 +563,7 @@ strong {
     font-size: 1.3rem;
     font-weight: 300;
     margin: 5px 0;
-    color: black;
+    color: #000;
 }
 
 /* texte avant formulaire */
@@ -541,9 +571,9 @@ strong {
     font-size: 0.9rem;
     line-height:1.2rem;
     margin: 50px 15px 80px;
-    color: #666;
+    color: #000;
     text-align: center;
-    border-top: 1px solid #bbb;
+    border-top: 1px solid #aa9e91;
     padding: 50px 0;
     font-weight: 300;
 }
@@ -564,7 +594,7 @@ strong {
 }
 
 #form-contact, #form-temoignage {
-    color: #666;
+    color: #000;
     padding: 0 15px;
 }
 
@@ -589,7 +619,7 @@ strong {
 
 /* select */
 #form-contact select, #form-contact textarea {
-    border-color: #bbb;
+    border-color: #aa9e91;
 }
 
 /* label "votre message" */
@@ -597,8 +627,8 @@ strong {
     margin-bottom: 7px;
 }
 
-/* padding left à l'intérieur des input */
-#form-contact input, #form-temoignage input {
+/* padding à l'intérieur des input et textarea */
+#form-contact input, #form-temoignage input, #form-contact textarea, #form-temoignage textarea {
     padding: 10px;
 }
 
@@ -606,7 +636,7 @@ strong {
     display: block;
     text-align: center;
     margin: 0 auto;
-    background-color: #666;
+    background-color: #aa9e91;
     color: #fff;
     height: 35px;
     width: 200px;
@@ -615,11 +645,20 @@ strong {
 }
 
 #form-contact input[type=submit]:hover, #form-temoignage input[type=submit]:hover {
-    background-color: #bbb;
+    background-color: #5d5147;
 }
 
 #form-contact input[type=submit]:active, #form-temoignage input[type=submit]:active {
     background-color: #ff6b70;
+}
+
+/* couleur du placeholder */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color:#aa9e91;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:#aa9e91;
 }
 
 
@@ -637,7 +676,7 @@ strong {
 }
 
 #form-contact input, #form-contact select, #form-contact textarea, #form-temoignage input, #form-temoignage textarea {
-    border: 1px solid #bbb;
+    border: 1px solid #5d5147;
     border-radius: 0;
 }
 
@@ -691,7 +730,7 @@ strong {
     font-weight: 300;
     font-size: 1rem;
     text-align: center;
-    color: #666;
+    color: #5d5147;
     margin: 0 0 10px;
 }
 
@@ -702,7 +741,7 @@ strong {
     font-size: 0.8rem;
     text-transform: uppercase;
     text-align: center;
-    color: #bbb;
+    color: #aa9e91;
     margin-top: 20px;
 }
 
@@ -723,8 +762,8 @@ strong {
 
 /* liens sociaux */
 #social-link-footer {
-    border-top: 1px solid #bbb;
-    border-bottom: 1px solid #bbb;
+    border-top: 1px solid #aa9e91;
+    border-bottom: 1px solid #aa9e91;
     text-align: center;
     height: 105px;
 }
@@ -741,7 +780,7 @@ strong {
     width: 45px;
     height: 45px;
     border-radius: 25px;
-    background-color: #666;
+    background-color: #5d5147;
 }
 
 /* pictos liens sociaux */
@@ -757,7 +796,7 @@ strong {
 
 /* mariage et savoir-faire */
 #social-link-footer div:last-of-type {
-    border-left: 1px solid #666;
+    border-left: 1px solid #aa9e91;
     margin-top: 10px;
     padding-right: 100px;
 }
@@ -778,14 +817,14 @@ strong {
 #social-link-footer div:last-of-type p {
     width: 77px;
     text-align: left;
-    color: #666;
+    color: #5d5147;
     font-size: 0.8rem;
 }
 
 
 /* titre instagram */
 footer #img-footer h3 {
-    color: #666;
+    color: #000;
     font-weight: 300;
     text-align: center;
     font-size: 0.8rem;
@@ -812,17 +851,17 @@ footer #img-footer div a:nth-of-type(3) {
 
 /* copyright */
 footer #img-footer p {
-    color: #666;
+    color: #000;
     font-weight: 300;
     text-align: center;
     font-size: 0.8rem;
     line-height: 1.1rem;
-    border-top: 1px solid #bbb;
+    border-top: 1px solid #aa9e91;
     padding: 12px;
 }
 
 footer #img-footer p a {
-    color: #666;
+    color: #000;
     font-weight: 300;
     font-size: 0.8rem;
 }
@@ -853,7 +892,7 @@ footer #img-footer p a {
     width: 300px;
     text-align: center;
     margin: 0 auto;
-    background-color: #bbb;
+    background-color: #aa9e91;
     color: #fff;
     height: 30px;
     line-height: 32px;
@@ -863,7 +902,7 @@ footer #img-footer p a {
 /* texte "plan du site" */
 #error p {
     text-align: center;
-    color: #666;
+    color: #5d5147;
     margin: 100px 0 0;
 }
 
@@ -881,7 +920,7 @@ footer #img-footer p a {
 }
 
 #error #plan>ul>li a {
-    color: #666;
+    color: #5d5147;
 }
 
 /* deuxièmes li */
@@ -890,13 +929,13 @@ footer #img-footer p a {
 }
 
 #error #plan ul ul li a {
-    color: #bbb;
+    color: #aa9e91;
     font-size: 0.9rem;
 }
 
 /* hover */
 #error a:hover {
-    color: #666;
+    color: #5d5147;
 }
 
 
@@ -972,7 +1011,7 @@ footer #img-footer p a {
 
     /**** page à propos ****/
     #apropos>div img:first-of-type {
-        margin: 0 20px;
+        margin: 0 20px 10px;
     }
 
     #apropos>div div {
@@ -1065,11 +1104,11 @@ footer #img-footer p a {
     }
 
     #social-link-header a:nth-of-type(2) {
-        padding-right: 50px;
+        padding-right: 80px;
     }
 
     #social-link-header a:nth-of-type(3) {
-        padding-left: 50px;
+        padding-left: 80px;
     }
 
 
@@ -1080,8 +1119,8 @@ footer #img-footer p a {
         padding: 40px 10px 0;
         height: 0;
         overflow: hidden;
-        border: 1px solid #bbb;
-        margin: 50px auto 60px;
+        border: 1px solid #aa9e91;
+        margin: 0 auto 60px;
     }
 
     nav a.mobile_menu {
@@ -1102,7 +1141,7 @@ footer #img-footer p a {
         float: none;
         margin-top: 10px;
         padding-bottom: 10px;
-        border-bottom: 1px solid #bbb;
+        border-bottom: 1px solid #aa9e91;
     }
 
     nav ul li:hover {
@@ -1299,6 +1338,18 @@ footer #img-footer p a {
     .col-xs-10 {width: 83.33%;}
     .col-xs-11 {width: 91.66%;}
     .col-xs-12 {width: 100%;}
+
+
+
+    #social-link-header a:nth-of-type(1) {
+        padding-right: 30px;
+    }
+
+    #social-link-header a:nth-of-type(4) {
+        padding-left: 30px;
+    }
+
+
 
 
     /**** carousel ****/

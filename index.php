@@ -70,6 +70,7 @@ require_once 'views/header.php';
             <a href="apropos.php">En savoir plus sur Fabrice</a>
         </div>
     </aside>
+    <a href="contact.php">Contactez-moi !</a>
 </main>
 
 <?php

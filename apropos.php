@@ -51,8 +51,7 @@ require_once 'views/header.php';
                 ex elit, sed lacinia velit hendrerit in. Mauris sed scelerisque sapien. Proin eu massa ullamcorper,
                 imperdiet lorem sed, cursus dui. Curabitur facilisis aliquam eleifend. Integer bibendum, felis ac finibus
                 pellentesque, dui velit semper velit, quis vestibulum nulla leo sed magna. Sed rhoncus neque in convallis
-                sodales. Curabitur elementum nibh nec bibendum pulvinar. Mauris mattis gravida scelerisque. Suspendisse
-                accumsan lectus convallis, tempor purus id, varius nulla.</p>
+                sodales.</p>
         </div>
     </div>
 </main>

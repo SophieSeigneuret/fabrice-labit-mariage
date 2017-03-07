@@ -45,7 +45,7 @@ function get_album() {
 function get_photos_mariage_by_album($album_id) {
     global $mysqli;
     // Rédaction de la requete sur les photos
-    $query_str = "Select photos.id, photos.nom_photo, photos.category_id, photos.album_id, photos.date, album.nom_album, album.date from photos INNER JOIN album on album.id=photos.album_id where photos.category_id = 2 and album_id = ".$album_id;
+    $query_str = "Select photos.id, photos.nom_photo, photos.category_id, photos.album_id, photos.date, photos.ordre, album.nom_album, album.date from photos INNER JOIN album on album.id=photos.album_id where photos.category_id = 2 and album_id = ".$album_id;
 
     $res = $mysqli->query($query_str); // Exécution de la requête
 
@@ -90,7 +90,6 @@ function get_album_by_category($category_id) {
     $query_str = "SELECT album.id, album.nom_album, album.nom_photo_album, album.ordre, album.date, photos.category_id, photos.nom_photo
                   FROM album INNER JOIN photos on album.id=photos.album_id WHERE photos.category_id= '$category_id' ORDER BY date DESC";
     //$query_str = "SELECT * FROM `album` WHERE category_id = '$category_id' ORDER BY `date` DESC";
-
     $res = $mysqli->query($query_str); // Exécution de la requête
 
     // Chargement des données, ligne par ligne (boucle while)
@@ -104,5 +103,34 @@ function get_album_by_category($category_id) {
 }
 
 
+function insertion_photos_mariage($album_id, $category_id, $date, $nom_photo, $ordre) {
+    global $mysqli;
+    // Rédaction de la requete sur les photos
+    $query_str = "INSERT INTO photos (album_id, category_id, date, nom_photo, ordre)
+                  VALUES ($album_id, $category_id, $date, $nom_photo, $ordre) ";
 
+    $res = $mysqli->query($query_str); // Exécution de la requête
+
+
+    if ($res === TRUE) {
+        $res= "New record created successfully";
+    } else {
+        $res= "Error: " . $query_str . "<br>" . $mysqli->error;
+    }
+
+    error_log ( $res );
+
+
+    $mysqli->close();
+
+}
+
+function get_ordre_max_photos_album($album_id) {
+    global $mysqli;
+    // Rédaction de la requete sur les photos
+    $query_str = "SELECT max(photos.ordre) AS nbMax
+                  FROM photos WHERE photos.album_id= $album_id";
+    $res = $mysqli->query($query_str); // Exécution de la requête
+    return $res->fetch_assoc()['nbMax'];
+}
 
