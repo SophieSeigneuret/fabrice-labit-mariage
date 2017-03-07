@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Dim 05 Mars 2017 à 06:19
+-- Généré le :  Mar 07 Mars 2017 à 03:15
 -- Version du serveur :  5.6.34
 -- Version de PHP :  7.1.0
 
@@ -265,7 +265,7 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT pour la table `album`
 --
 ALTER TABLE `album`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT pour la table `category`
 --
