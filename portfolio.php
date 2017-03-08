@@ -19,7 +19,7 @@ require_once 'db/db_access.php';
         <title>Photos d'engagement par Fabrice Labit</title>
     <?php } ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- css grille portfolio -->
     <link rel="stylesheet" href="css/porfolio.css">

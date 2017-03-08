@@ -182,8 +182,9 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a:active {
     color: #5d5147;
+    font-weight: 400;
 }
 
 nav ul ul {
@@ -250,6 +251,7 @@ nav > ul > li > a {
 
 .active {
     color: #5d5147;
+    font-weight: 400;
 }
 
 strong {
@@ -393,7 +395,7 @@ strong {
     display: block;
     color: #aa9e91;
     /*background-color: #aa9e91;*/
-    /*width: 100px;*/
+    width: 200px;
     margin: 0 auto;
     /*line-height: 28px;*/
     /*height: 25px;*/
