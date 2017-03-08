@@ -4,11 +4,11 @@
         <div class="col-7 col-s-7 col-xs-8">
             <a href="https://www.facebook.com/fabricelabitmariage/" target="_blank">
                 <img src="images/social_facebook_blanc.png" alt="logo facebook gris"></a>
-            <a href="https://www.instagram.com/fabricelabit/" target="_blank">
+            <a href="https://www.instagram.com/FabriceLabit_MARIAGE/" target="_blank">
                 <img src="images/social_instagram_blanc.png" alt="logo instagram gris"></a>
-            <a href="https://fr.pinterest.com/fabricelabit/" target="_blank">
+            <a href="https://fr.pinterest.com/fabricelabit/weddings/" target="_blank">
                 <img src="images/social_pinterest_blanc.png" alt="logo pinterest gris"></a>
-            <a href="https://twitter.com/fabricelabit" target="_blank">
+            <a href="https://twitter.com/FabriceLabit" target="_blank">
                 <img src="images/social_twitter_blanc.png" alt="logo twitter gris"></a>
         </div>
         <div class="col-5 col-s-5 col-xs-4">
