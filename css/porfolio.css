@@ -59,10 +59,10 @@ li.grid-item {
     left: 20px;
     position: absolute;
     text-transform: uppercase;
-    color: #666;
+    color: #5d5147;
     font-weight: 300;
     line-height: 1.2rem;
-    width: 250px;
+    width: 450px;
 }
 
 .grid-hover p {
@@ -70,7 +70,7 @@ li.grid-item {
     bottom: 20px;
     left: 20px;
     position: absolute;
-    color: #666;
+    color: #5d5147;
     font-weight: 400;
 }
 
@@ -105,7 +105,6 @@ RESPONSIVE
     }
 
     .grid-hover h1 {
-        width: 350px;
         bottom: 18px;
     }
 
@@ -134,7 +133,6 @@ RESPONSIVE
     }
 
     .grid-hover h1 {
-        width: 330px;
         bottom: 2px;
     }
 
@@ -152,6 +150,10 @@ RESPONSIVE
 
     .grid-hover h1 {
         bottom: -3px;
+        width: 280px;
+        font-size: 0.85rem;
+        left: 10px;
+        line-height: 1.4rem;
     }
 
 }

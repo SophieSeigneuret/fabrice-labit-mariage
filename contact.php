@@ -187,7 +187,7 @@ require_once 'views/header.php';
             <input type="tel" name="telephone" id="telephone" value="<?= $telephone ?>" class="col-8 col-m-8 col-s-12 <?= ! $telephone_valide ? 'error' : '' ?>" />
             <?php if(! $telephone_valide) { ?>
                 <p class="col-4 col-s-12"></p>
-                <p class="col-8 col-s-12">Téléphone au format 06 12 34 56 78 ou +336 12 34 56 78</p> <!-- message d'erreur si champ incorrect -->
+                <p class="col-8 col-s-12">Téléphone au format 06 12 34 56 78</p> <!-- message d'erreur si champ incorrect -->
             <?php } ?>
         </div>
         <!-- champ email -->
@@ -241,16 +241,16 @@ require_once 'views/header.php';
         <div class="row">
             <label class="col-4 col-m-4 col-s-12">Votre budget photographe <?= ! $budget_valide ? '<span class="invalid">*</span>' : '' ?></label>
             <div class="col-2 col-m-2 col-s-3 col-xs-12 type-radio">
-                <input type="radio" name="budget" id="1700" value="1700" class="<?= ! $budget_valide ? 'error' : '' ?>" <?php if($_POST['budget']=="1700") echo "checked";?> />
-                <label for="1700">&lt; 1700€</label>
+                <input type="radio" name="budget" id="1800" value="1800" class="<?= ! $budget_valide ? 'error' : '' ?>" <?php if($_POST['budget']=="1800") echo "checked";?> />
+                <label for="1800">&lt; 1800€</label>
             </div>
             <div class="col-3 col-m-3 col-s-6 col-xs-12 type-radio">
-                <input type="radio" name="budget" id="2000" value="2000" <?php if($_POST['budget']=="2000") echo "checked";?> />
-                <label for="2000">1700€ - 2200€</label>
+                <input type="radio" name="budget" id="2400" value="2400" <?php if($_POST['budget']=="2400") echo "checked";?> />
+                <label for="2400">1800€ - 3000€</label>
             </div>
             <div class="col-2 col-m-2 col-s-3 col-xs-12 type-radio">
-                <input type="radio" name="budget" id="2200" value="2200" <?php if($_POST['budget']=="2200") echo "checked";?> />
-                <label for="2200">&gt; 2200€</label>
+                <input type="radio" name="budget" id="3000" value="3000" <?php if($_POST['budget']=="3000") echo "checked";?> />
+                <label for="3000">&gt; 3000€</label>
             </div>
             <?php if(! $budget_valide) { ?>
                 <p class="col-4 col-s-12"></p>

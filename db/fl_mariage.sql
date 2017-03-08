@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Mar 07 Mars 2017 à 03:15
+-- Généré le :  Mar 07 Mars 2017 à 20:56
 -- Version du serveur :  5.6.34
 -- Version de PHP :  7.1.0
 
@@ -229,11 +229,8 @@ INSERT INTO `photos` (`id`, `nom_photo`, `category_id`, `album_id`, `ordre`, `da
 (139, 'engagement_43.jpg', 3, 10, 43, '2016-10-23', 'paysage'),
 (140, 'engagement_44.jpg', 3, 10, 44, '2016-10-23', 'paysage'),
 (141, 'engagement_45.jpg', 3, 10, 45, '2016-10-23', 'paysage'),
-(142, 'engagement_46.jpg', 3, 11, 46, '2016-10-29', 'paysage'),
 (143, 'engagement_47.jpg', 3, 11, 47, '2016-10-29', 'paysage'),
-(144, 'engagement_48.jpg', 3, 11, 48, '2016-10-29', 'paysage'),
-(145, 'engagement_49.jpg', 3, 11, 49, '2016-10-29', 'paysage'),
-(146, 'engagement_50.jpg', 3, 11, 50, '2016-10-29', 'paysage');
+(145, 'engagement_49.jpg', 3, 11, 49, '2016-10-29', 'paysage');
 
 --
 -- Index pour les tables exportées
@@ -275,7 +272,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT pour la table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=169;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

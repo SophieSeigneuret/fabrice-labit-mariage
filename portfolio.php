@@ -73,11 +73,13 @@ if (!$is_mariage) {
     }
     ?>
     <main class="wrapper" id="<?= $id_main ?>">
-        <h2><?= $titre ?></h2>
+        <h2><?= $titre ?> <?php if (array_key_exists('mariage_detail', $_GET)) { echo $photos[0]['nom_album']; } ?></h2>
+        <!-- affichage du nom de l'album de mariage -->
         <?php if (array_key_exists('mariage_detail', $_GET)) { ?>
-            <h3><?= $photos[0]['nom_album'] ?></h3>
-            <a href="portfolio.php?mariage">retour</a>
+<!--            <h3>- --><?//= $photos[0]['nom_album'] ?><!-- -</h3>-->
+            <a href="portfolio.php?mariage">retour vers mariage</a>
         <?php } ?>
+        <!-- affichage des photos -->
         <div class="content ajax-content">
             <ul class="portfolio-grid">
                 <?php foreach ($photos as $id => $photo) { ?>
@@ -89,15 +91,17 @@ if (!$is_mariage) {
                     </li>
                 <?php } ?>
             </ul>
+            <!-- flèche retour vers le haut -->
             <?php if (array_key_exists('mariage_detail', $_GET)) { ?>
                 <a href="portfolio.php?<?= $id_main ?>&id=<?= $_GET['id'] ?>" id="fleche"><img src="images/fleche_haut.gif" alt="flèche vers le haut"></a>
             <?php } else { ?>
                 <a href="portfolio.php?<?= $id_main ?>" id="fleche"><img src="images/fleche_haut.gif" alt="flèche vers le haut"></a>
             <?php } ?>
         </div>
+        <!-- lien retour de la page photos détail des mariés vers la page "mariage" -->
         <?php if (array_key_exists('mariage_detail', $_GET)) {
             //var_dump($photos[0]['nom_album']);?>
-            <a href="portfolio.php?mariage">retour</a>
+            <a href="portfolio.php?mariage">retour vers mariage</a>
         <?php } ?>
     </main>
 <?php } else {
@@ -112,7 +116,9 @@ if (!$is_mariage) {
             <ul class="portfolio-grid">
                 <?php foreach ($album_mariage as $id => $album) { ?>
                     <li class="grid-item">
-                        <img src="<?= IMG_PATH, $album['nom_photo_album'] ?>" alt="photo couple">
+                        <a href="portfolio.php?mariage_detail&id=<?= $album['id'] ?>">
+                            <img src="<?= IMG_PATH, $album['nom_photo_album'] ?>" alt="photo couple">
+                        </a>
                         <a href="portfolio.php?mariage_detail&id=<?= $album['id'] ?>">
                             <div class="grid-hover">
                                 <h1><?= $album['nom_album'] ?></h1>
@@ -122,7 +128,7 @@ if (!$is_mariage) {
                     </li>
                 <?php } ?>
             </ul>
-<!--            <a href="portfolio.php?mariage" id="fleche"><img src="images/fleche_haut.gif" alt="flèche vers le haut"></a>-->
+        <!-- <a href="portfolio.php?mariage" id="fleche"><img src="images/fleche_haut.gif" alt="flèche vers le haut"></a> -->
         </div>
     </main>
 

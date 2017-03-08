@@ -61,12 +61,12 @@ require_once 'views/header.php';
     <div>
         <img src="images/photo-engagement-sylvie-franck.jpg" alt="photo engagement Sylvie et Franck" ><!--
      --><div>
-            <h3>Sylvie & Franck - Séance engagement à Versailles</h3>
+            <h3>Sylvie & Franck - Engagement à Versailles</h3>
             <p itemprop="comment">Merci pour les photos, nous sommes très contents du rendu des photos ! Sur certaines photos on se
                 trouve même beau ;) et surtout tu as réussi à capter notre naturel et notre complicité ! Nous, c’est ce
                 qu’on ressent quand on regarde les photos. On s’est dit souvent: “là je te reconnais” ou “on a l’air
                 complices”. Nous avons hâte de faire les prochaines séances sous la neige puis quand il fera bon. On
-                t’embrasse !</p>
+                t’embrasse!</p>
         </div>
     </div>
 </main>

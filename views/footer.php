@@ -20,13 +20,13 @@
     <div id="img-footer" itemscope itemtype="http://schema.org/Photograph">
         <h3>Suivez-moi sur Instagram</h3>
         <div class="row">
-            <a href="https://www.instagram.com/fabricelabit/" target="_blank" class="col-4"><img
+            <a href="https://www.instagram.com/FabriceLabit_MARIAGE/" target="_blank" class="col-4"><img
                     src="images/img-footer-1.jpg" alt="photo mariés qui sautent sur la plage"></a><!--
-         --><a href="https://www.instagram.com/fabricelabit/" target="_blank" class="col-2"><img
+         --><a href="https://www.instagram.com/FabriceLabit_MARIAGE/" target="_blank" class="col-2"><img
                     src="images/img-footer-2.jpg" alt="photo mariée de dos"></a><!--
-         --><a href="https://www.instagram.com/fabricelabit/" target="_blank" class="col-4"><img
+         --><a href="https://www.instagram.com/FabriceLabit_MARIAGE/" target="_blank" class="col-4"><img
                     src="images/img-footer-3b.jpg" alt="photo gros plan sur les mains des mariés"></a><!--
-         --><a href="https://www.instagram.com/fabricelabit/" target="_blank" class="col-2"><img
+         --><a href="https://www.instagram.com/FabriceLabit_MARIAGE/" target="_blank" class="col-2"><img
                     src="images/img-footer-4.jpg" alt="photo robe de mariée suspendue"></a>
         </div>
 
