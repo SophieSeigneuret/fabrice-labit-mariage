@@ -11,7 +11,7 @@ Site réalisé dans le cadre d’un projet scolaire (ISI Montréal) avec un rée
 
 **Choix du site :** Fabrice Labit est un photographe qui désire avoir un site spécialisé dans les photos de mariages
 
-**Graphisme :** Charte graphique, choix des couleurs
+**Graphisme :** Charte graphique en partant du logo fourni par le client, choix des couleurs
 
 **Page d’accueil :** 
 - header présent sur chaque page du site comportant le logo, les liens vers les médias sociaux et le menu de navigation 
